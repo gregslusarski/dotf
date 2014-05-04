@@ -1,0 +1,114 @@
+# TERMINAL # {{{1
+alias cdc='cd && clear'
+alias ..='cd ..'
+alias qq='exit'
+alias c='clear'
+alias lsd='ls -d -- */'
+alias ll='ls -l'
+alias la='ls -a'
+alias l.='ls -ld .[^.]*'
+alias l='ls -CF'
+alias tr='tree'
+alias p='pwd'
+alias cl='wc -l * | sort -g'
+# Zsh
+alias soz='source ~/.zshrc'
+# Reboot, shutdown
+# alias _ss='sudo shutdown -h now'
+# alias _sr='sudo reboot'
+
+# BOOKMARKS # {{{1
+alias cdm='cd ~/Dropbox/coding/moon'
+alias cdd='cd ~/Dropbox/dotf'
+alias cdsc='cd ~/Dropbox/scripts'
+
+# ARCH # {{{1
+alias pup='pacaur -Syu'
+alias ps='pacaur -S'
+alias prs='sudo pacman -Rs $(pacman -Qdtq)'
+alias prns='sudo pacman -Rns $(pacman -Qdtq)'
+alias pscc='sudo pacman -Scc'
+alias ys='yaourt -S'
+alias yss='yaourt -Ss'
+
+# VIM # {{{1
+alias vup='vim +"set nomore" +NeoBundleInstall! +NeoBundleClean! +qall'
+
+# GIT # {{{1
+alias gup='git add . && git commit -m "Update" && git push'
+alias gcl='git clone'
+alias gi='git init'
+alias gps='git push'
+alias gpl='git pull'
+# stage
+alias ga='git add'
+# unstage
+#alias grs='git reset'
+alias ga.='git add .'
+#alias gaa='git add -A'
+#alias gc='git commit'
+alias gci='git commit -m'
+#alias gcia='git commit -am'
+#alias gciam='git commit --ammend -m'
+#alias gstf='git status'
+alias gst='git status -s --branch'
+#alias gstis='git status --ignore-submodules'
+#alias glg='git log --stat -p'
+#alias glgo='git log --oneline'
+#alias gdf='git diff'
+#alias gdfh='git diff HEAD'
+#alias gdfs='git diff --staged'
+#alias gdfis='git diff --ignore-submodules'
+#alias gco='git checkout'
+#alias grb='git rebase'
+#alias gbr='git branch'
+#alias gsma='git submodule add'
+#alias gsmi='git submodule init'
+#alias gsmu='git submodule update'
+#alias gsmui='git submodule update --init'
+alias grtaog='git remote add origin'
+alias gpsuogmt='git push -u origin master'
+#alias gplsub='git submodule foreach "git pull origin master"'
+#alias grm='git rm'
+#alias grmc='git rm --cached'
+
+alias make='make -j$(grep -c ^processor /proc/cpuinfo)'
+alias smi='sudo make -j$(grep -c ^processor /proc/cpuinfo) install'
+alias mcm='make -j$(grep -c ^processor /proc/cpuinfo) cmake'
+
+# VIM # {{{1
+alias v='vim'
+alias gv='gvim'
+alias sv='sudo vim'
+alias vdf='vimdiff'
+
+# TMUX # {{{1
+#alias tmux='TERM=screen-256color-bce tmux'
+#alias t='TERM=screen-256color-bce tmux'
+
+alias lj='luajit'
+# run moon file with luajit
+alias ljm='luajit ~/bin/moon'
+
+# ACK-GREP # {{{1
+alias ack='ack-grep'
+alias ag='ack-grep'
+alias agt='ack-grep --text'
+alias agl='ack-grep --lua'
+alias agm='ack-grep --moon'
+alias agv='ack-grep --vim'
+alias agc='ack-grep --c'
+# alias agr='ack-grep --ruby'
+# alias agp='ack-grep --python'
+
+# FIND FILE / DIR # {{{1
+alias ff='sudo find / -type f -name'
+alias fd='sudo find / -type d -name'
+
+# CREATE FILE / DIR # {{{1
+alias mf='touch'
+alias md='mkdir -p'
+
+# DU / DF (FILE / DISK SPACE USAGE) # {{{1
+alias du='du -hs * | sort -h'
+alias df='df -h'

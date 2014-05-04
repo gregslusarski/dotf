@@ -1,0 +1,14 @@
+[user]
+	name = viszu
+	email = viszu84@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
+[credential]
+	helper = cache --timeout=3600
+[push]
+	default = matching
