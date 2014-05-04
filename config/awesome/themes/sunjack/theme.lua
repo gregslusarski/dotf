@@ -56,7 +56,7 @@ theme.bg_urgent = "#ffc0c0"
 --//
 
 --// Borders
-theme.border_width  = "1"
+theme.border_width  = "0"
 theme.border_normal = "#121212"
 theme.border_focus  = theme.fg_focus
 theme.border_marked = "#000000"
