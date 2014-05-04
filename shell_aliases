@@ -112,3 +112,7 @@ alias md='mkdir -p'
 # DU / DF (FILE / DISK SPACE USAGE) # {{{1
 alias du='du -hs * | sort -h'
 alias df='df -h'
+
+# TOUCHPAD # {{{1
+alias touchon='synclient touchpadoff=0'
+alias touchoff='synclient touchpadoff=1'

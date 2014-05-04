@@ -466,4 +466,5 @@ end
 
 run_once("redshift")
 run_once("pnmixer")
+run_once("synclient touchpadoff=1")
 -- }}}
