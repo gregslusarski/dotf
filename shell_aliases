@@ -19,8 +19,6 @@ alias soz='source ~/.zshrc'
 
 # BOOKMARKS # {{{1
 alias cdm='cd ~/Dropbox/coding/moon'
-alias cdd='cd ~/Dropbox/dotf'
-alias cdsc='cd ~/Dropbox/scripts'
 
 # ARCH # {{{1
 alias pup='pacaur -Syu'
@@ -28,8 +26,7 @@ alias ps='pacaur -S'
 alias prs='sudo pacman -Rs $(pacman -Qdtq)'
 alias prns='sudo pacman -Rns $(pacman -Qdtq)'
 alias pscc='sudo pacman -Scc'
-alias ys='yaourt -S'
-alias yss='yaourt -Ss'
+alias pss='pacaur -Ss'
 
 # VIM # {{{1
 alias vup='vim +"set nomore" +NeoBundleInstall! +NeoBundleClean! +qall'
