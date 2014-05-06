@@ -1,4 +1,4 @@
--- sunjack, awesome3 theme, by
+-- gs, awesome3 theme, by
 
 --{{{ Main
 local awful = require("awful")
@@ -15,7 +15,7 @@ end
 sharedicons   = shared .. "/icons"
 sharedthemes  = shared .. "/themes"
 themes        = config .. "/themes"
-themename     = "/sunjack"
+themename     = "/gs"
 if not awful.util.file_readable(themes .. themename .. "/theme.lua") then
        themes = sharedthemes
 end
@@ -46,9 +46,10 @@ end
 theme.font      = "Inconsolata 12"
 
 --// Colors
---theme.fg_normal = "#808080"
+-- theme.fg_normal = "#808080"
 theme.fg_normal = "#BABDB6"
-theme.fg_focus  = "#286f8a"
+-- theme.fg_focus  = "#286f8a"
+theme.fg_focus  = "#5d8d4f"
 theme.fg_urgent = "#000000"
 theme.bg_normal = "#202020"
 theme.bg_focus  = "#0f0f0f"

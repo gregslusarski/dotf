@@ -39,7 +39,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(awful.util.getdir("config") .. "/themes/sunjack/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/gs/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "gnome-terminal"
@@ -466,5 +466,6 @@ end
 
 run_once("redshift")
 run_once("pnmixer")
+-- run_once("radiotray")
 run_once("synclient touchpadoff=1")
 -- }}}
