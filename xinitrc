@@ -16,5 +16,3 @@ fi
 # exec startxfce4
 # ...or the Window Manager of your choice
 exec awesome
-# DEFAULT_SESSION=startawesome
-# exec $DEFAULT_SESSION

@@ -331,7 +331,7 @@ let g:lightline = {
         \   'right': [[ 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype']]
         \ },
         \ 'component': {
-        \   'lineinfo': '%3l:%-2v',
+        \   'lineinfo': '⭡ %3l:%-2v',
         \   'paste': '%{&paste?"P":""}',
         \ },
         \ 'component_function': {
@@ -351,7 +351,7 @@ function! MyModified()
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help' && &readonly ? '' : ''
+  return &ft !~? 'help' && &readonly ? '⭤ ' : ''
 endfunction
 
 function! MyFilename()
@@ -370,7 +370,7 @@ endfunction
 function! MyFugitive()
   try
     if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = ' '  " edit here for cool mark
+      let mark = '⭠ '  " edit here for cool mark
       let _ = fugitive#head()
       return strlen(_) ? mark._ : ''
     endif
@@ -671,7 +671,7 @@ endfun
 " -------------------------
 if has('gui_running')
   if has('unix')
-    set guifont=Inconsolata\ Medium\ 13
+    set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
   elseif has('gui_win32') || has('gui_win64')
     let g:skip_loading_mswin=1
     set guifont=Droid_Sans_Mono:h10.2
