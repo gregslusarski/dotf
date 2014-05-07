@@ -52,8 +52,10 @@ theme.fg_normal = "#BABDB6"
 -- theme.fg_focus  = "#286f8a"
 theme.fg_focus  = "#5d8d4f"
 theme.fg_urgent = "#000000"
-theme.bg_normal = "#202020"
-theme.bg_focus  = "#0f0f0f"
+-- theme.bg_normal = "#202020"
+theme.bg_normal = "#020202"
+-- theme.bg_focus  = "#0f0f0f"
+theme.bg_focus  = "#020202"
 theme.bg_urgent = "#ffc0c0"
 --//
 
