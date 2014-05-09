@@ -108,14 +108,18 @@ mytextclock = awful.widget.textclock()
 -- Initialize widget
 cpuwidget = wibox.widget.textbox()
 -- Register widget
-vicious.register(cpuwidget, vicious.widgets.cpu, " $1%·")
+-- vicious.register(cpuwidget, vicious.widgets.cpu, " $1%·")
+vicious.register(cpuwidget, vicious.widgets.cpu, function(widget, args)
+  return (" %02d%%·"):format(args[1])end)
 cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.cpuicon)
 
 -- Initialize widget
 memwidget = wibox.widget.textbox()
 -- Register widget
-vicious.register(memwidget, vicious.widgets.mem, "$1%", 4)
+-- vicious.register(memwidget, vicious.widgets.mem, "$1%", 4)
+vicious.register(memwidget, vicious.widgets.mem, function(widget, args)
+  return ("%02d%%"):format(args[1])end, 4)
 memicon = wibox.widget.imagebox()
 memicon:set_image(beautiful.mem)
 
