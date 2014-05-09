@@ -15,4 +15,6 @@ fi
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
+# map caps-lock to escape
+setxkbmap -option caps:escape
 exec awesome
