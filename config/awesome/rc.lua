@@ -76,7 +76,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "1", "2", "3"}, s, layouts[1])
+    tags[s] = awful.tag({ 1, 2, 3}, s, layouts[1])
 end
 -- }}}
 
@@ -458,19 +458,30 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
--- Autostart
-function run_once(cmd)
-  findme = cmd
-  firstspace = cmd:find(" ")
-  if firstspace then
-    findme = cmd:sub(0, firstspace-1)
-  end
-  awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
+-- autostart
+function run_once(prg,arg_string,pname,screen)
+    if not prg then
+        do return nil end
+    end
+
+    if not pname then
+       pname = prg
+    end
+
+    if not arg_string then
+        awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. pname .. "' || (" .. prg .. ")",screen)
+    else
+        awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. pname .. " ".. arg_string .."' || (" .. prg .. " " .. arg_string .. ")",screen)
+    end
 end
 
 run_once("redshift")
 run_once("pnmixer")
 run_once("dropboxd")
--- run_once("radiotray")
 run_once("synclient touchpadoff=1")
+run_once("pcmanfm")
+run_once("urxvt")
+-- run_once("google-chrome-stable")
+-- run_once("spotify")
+-- run_once("radiotray")
 -- }}}

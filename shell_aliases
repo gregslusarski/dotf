@@ -27,7 +27,7 @@ alias prs='sudo pacman -Rs $(pacman -Qdtq)'
 alias prns='sudo pacman -Rns $(pacman -Qdtq)'
 alias pscc='sudo pacman -Scc'
 alias pss='pacaur -Ss'
-
+alias plp='expac "%n %m" -l'\n' -Q | sort -rhk 2 | less'
 # VIM # {{{1
 alias vup='vim +"set nomore" +NeoBundleInstall! +NeoBundleClean! +qall'
 
