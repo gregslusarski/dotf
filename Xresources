@@ -2,12 +2,12 @@
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
 ! URxvt*reverseVideo:                   boolean
-! URxvt*loginShell:                     boolean
+URxvt*loginShell:                     true
 ! URxvt*jumpScroll:                     boolean
 ! URxvt*skipScroll:                     boolean
 ! URxvt*pastableTabs:                   boolean
 ! URxvt*scrollstyle:                    mode
-! URxvt*scrollBar:                      boolean
+URxvt*scrollBar:                      false
 ! URxvt*scrollBar_right:                boolean
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
@@ -31,7 +31,7 @@
 ! URxvt*tripleclickwords:               boolean
 ! URxvt*insecure:                       boolean
 ! URxvt*cursorUnderline:                boolean
-! URxvt*cursorBlink:                    boolean
+URxvt*cursorBlink:                    true
 ! URxvt*pointerBlank:                   boolean
 ! URxvt*background:                     color
 ! URxvt*foreground:                     color
@@ -66,8 +66,8 @@
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-! URxvt*font:                           fontname
-! URxvt*boldFont:                       fontname
+URxvt*font:                           Inconsolata-dz for Powerline 11
+URxvt*boldFont:                       Inconsolata-dz for Powerline 11
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
 ! URxvt*intensityStyles:                boolean

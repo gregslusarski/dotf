@@ -1,0 +1,10 @@
+[Default Applications]
+image/jpeg=viewnior.desktop
+audio/flac=rhythmbox.desktop
+text/plain=gvim.desktop
+inode/directory=pcmanfm.desktop
+
+[Added Associations]
+image/jpeg=viewnior.desktop;
+audio/flac=rhythmbox.desktop;
+text/plain=gvim.desktop;
