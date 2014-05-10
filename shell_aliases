@@ -30,6 +30,7 @@ alias pss='pacaur -Ss'
 alias plp='expac "%n %m" -l'\n' -Q | sort -rhk 2 | less'
 # VIM # {{{1
 alias vup='vim +"set nomore" +NeoBundleInstall! +NeoBundleClean! +qall'
+alias fm='xdg-open .'
 
 # GIT # {{{1
 alias gup='git add . && git commit -m "Update" && git push'
