@@ -2,7 +2,7 @@
 alias cdc='cd && clear && archey'
 alias ..='cd ..'
 alias qq='exit'
-alias c='clear'
+alias c='clear && archey'
 alias lsd='ls -d -- */'
 alias ll='ls -l'
 alias la='ls -a'
