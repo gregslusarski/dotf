@@ -392,30 +392,22 @@ awful.rules.rules = {
     -- tag 1
     { rule = { class = "Pcmanfm" },
       properties = { tag = tags[1][1] } },
-    { rule = { class = "Gnome-terminal" },
-      properties = { tag = tags[1][1] } },
     { rule = { class = "URxvt" },
       properties = { tag = tags[1][1] } },
+    { rule = { class = "Gnome-terminal" },
+      properties = { tag = tags[1][1] } },
     -- tag 2
-    { rule = { class = "Vlc" },
-      properties = { tag = tags[1][2] } },
-    { rule = { class = "Vlc" },
-      properties = { floating = true } },
     { rule = { class = "Google-chrome-stable" },
-      properties = { tag = tags[1][2] } },
-    { rule = { class = "Google-chrome-stable" },
-      properties = { maximized = true } },
+      properties = { tag = tags[1][2], maximized = true } },
+    { rule = { class = "Vlc" },
+      properties = { tag = tags[1][2], floating = true } },
     { rule = { class = "Transmission-gtk" },
-      properties = { tag = tags[1][2] } },
-    { rule = { class = "Transmission-gtk" },
-      properties = { floating = true } },
+      properties = { tag = tags[1][2], floating = true } },
     -- tag 3
     { rule = { class = "Spotify" },
-      properties = { tag = tags[1][3] } },
+      properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Rhythmbox" },
-      properties = { tag = tags[1][3] } },
-    { rule = { class = "Rhythmbox" },
-      properties = { floating = true } },
+      properties = { tag = tags[1][3], floating = true } },
     -- Set Xterm as floating with a fixed position
     --  { rule = { class = "XTerm" }, properties = {floating = true}, callback
     --  = function(c) c:geometry({x=0, y=0}) end},}
