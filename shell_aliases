@@ -1,5 +1,5 @@
 # TERMINAL # {{{1
-alias cdc='cd && clear'
+alias cdc='cd && clear && archey'
 alias ..='cd ..'
 alias qq='exit'
 alias c='clear'

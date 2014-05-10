@@ -34,6 +34,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+export PATH=~/bin:$PATH
 export TERM=xterm-256color
 
 export EDITOR="vim"

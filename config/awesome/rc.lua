@@ -111,8 +111,8 @@ cpuwidget = wibox.widget.textbox()
 -- vicious.register(cpuwidget, vicious.widgets.cpu, " $1%·")
 vicious.register(cpuwidget, vicious.widgets.cpu, function(widget, args)
   return (" %02d%%·"):format(args[1])end)
-cpuicon = wibox.widget.imagebox()
-cpuicon:set_image(beautiful.cpuicon)
+-- cpuicon = wibox.widget.imagebox()
+-- cpuicon:set_image(awful.util.getdir("config") .. "/themes/gs/icons/cpu.png")
 
 -- Initialize widget
 memwidget = wibox.widget.textbox()
@@ -120,8 +120,8 @@ memwidget = wibox.widget.textbox()
 -- vicious.register(memwidget, vicious.widgets.mem, "$1%", 4)
 vicious.register(memwidget, vicious.widgets.mem, function(widget, args)
   return ("%02d%%"):format(args[1])end, 4)
-memicon = wibox.widget.imagebox()
-memicon:set_image(beautiful.mem)
+-- memicon = wibox.widget.imagebox()
+-- memicon:set_image(beautiful.mem)
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -202,9 +202,9 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
-    right_layout:add(cpuicon)
+    -- right_layout:add(cpuicon)
     right_layout:add(cpuwidget)
-    right_layout:add(memicon)
+    -- right_layout:add(memicon)
     right_layout:add(memwidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
