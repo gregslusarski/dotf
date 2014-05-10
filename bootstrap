@@ -1,1 +1,21 @@
-ln -s ~/dotf/mimeapps.list ~/.local/share/applications/
+#!/bin/bash
+
+# Get the dir of the current script
+script_dir="$( cd "$( dirname "$0" )" && pwd )"
+
+ln -s $script_dir/xinitrc ~/.xinitrc
+ln -s $script_dir/Xresources ~/.Xresources
+ln -s $script_dir/zshrc ~/.zshrc
+ln -s $script_dir/shell_aliases ~/.shell_aliases
+ln -s $script_dir/vimrc ~/.vimrc
+ln -s $script_dir/gitconfig ~/.gitconfig
+ln -s $script_dir/gitignore_global ~/.gitignore_global
+ln -s $script_dir/tmux.conf ~/.tmux.conf
+
+ln -s $script_dir/user-dirs.dirs ~/.config/
+ln -s $script_dir/mimeapps.list ~/.local/share/applications/
+
+ln -s $script_dir/config/awesome ~/.config/
+
+ln -s $script_dir/config/redshift.conf ~/.config/
+ln -s $script_dir/config/rediotray.xml ~/.local/share/radiotray/bookmarks.xml
