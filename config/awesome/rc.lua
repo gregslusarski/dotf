@@ -59,7 +59,15 @@ local layouts =
     awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
+    -- awful.layout.suit.fair,
+    -- awful.layout.suit.fair.horizontal,
+    -- awful.layout.suit.spiral,
+    -- awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
+    -- awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.magnifier,
 }
 -- }}}
 
@@ -374,8 +382,6 @@ awful.rules.rules = {
                      raise = true,
                      keys = clientkeys,
                      buttons = clientbuttons } },
-    { rule = { class = "MPlayer" },
-      properties = { floating = true } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
@@ -383,6 +389,36 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
+    -- tag 1
+    { rule = { class = "Pcmanfm" },
+      properties = { tag = tags[1][1] } },
+    { rule = { class = "Gnome-terminal" },
+      properties = { tag = tags[1][1] } },
+    { rule = { class = "URxvt" },
+      properties = { tag = tags[1][1] } },
+    -- tag 2
+    { rule = { class = "Vlc" },
+      properties = { tag = tags[1][2] } },
+    { rule = { class = "Vlc" },
+      properties = { floating = true } },
+    { rule = { class = "Google-chrome-stable" },
+      properties = { tag = tags[1][2] } },
+    { rule = { class = "Google-chrome-stable" },
+      properties = { maximized = true } },
+    { rule = { class = "Transmission-gtk" },
+      properties = { tag = tags[1][2] } },
+    { rule = { class = "Transmission-gtk" },
+      properties = { floating = true } },
+    -- tag 3
+    { rule = { class = "Spotify" },
+      properties = { tag = tags[1][3] } },
+    { rule = { class = "Rhythmbox" },
+      properties = { tag = tags[1][3] } },
+    { rule = { class = "Rhythmbox" },
+      properties = { floating = true } },
+    -- Set Xterm as floating with a fixed position
+    --  { rule = { class = "XTerm" }, properties = {floating = true}, callback
+    --  = function(c) c:geometry({x=0, y=0}) end},}
 }
 -- }}}
 
