@@ -3,6 +3,7 @@
 # Get the dir of the current script
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
+sudo ln -s $script_dir/slim.conf /etc/
 ln -s $script_dir/xinitrc ~/.xinitrc
 ln -s $script_dir/Xresources ~/.Xresources
 ln -s $script_dir/zshrc ~/.zshrc
