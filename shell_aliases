@@ -12,7 +12,7 @@ alias tr='tree'
 alias p='pwd'
 alias cl='wc -l * | sort -g'
 # Zsh
-alias soz='source ~/.zshrc'
+alias soz='source ~/.zshrc && clear && archey'
 # Reboot, shutdown
 # alias _ss='sudo shutdown -h now'
 # alias _sr='sudo reboot'
@@ -28,6 +28,7 @@ alias prns='sudo pacman -Rns $(pacman -Qdtq)'
 alias pscc='sudo pacman -Scc'
 alias pss='pacaur -Ss'
 alias plp='expac "%n %m" -l'\n' -Q | sort -rhk 2 | less'
+alias plpi='pacman -Qet | wc -l && pacman -Qet | less'
 # VIM # {{{1
 alias vup='vim +"set nomore" +NeoBundleInstall! +NeoBundleClean! +qall'
 alias fm='xdg-open .'
@@ -87,6 +88,8 @@ alias vdf='vimdiff'
 alias lj='luajit'
 # run moon file with luajit
 alias ljm='luajit ~/bin/moon'
+
+alias less='less -R'
 
 # ACK-GREP # {{{1
 alias ack='ack-grep'
