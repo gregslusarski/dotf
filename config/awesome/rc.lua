@@ -403,7 +403,7 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "Gvim" },
       properties = { floating = true } },
-    { rule = { class = "Vlc" },
+    { rule = { class = "Rosa-media-player" },
       properties = { floating = true } },
     { rule = { class = "Transmission-gtk" },
       properties = { floating = true } },
