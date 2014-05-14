@@ -57,7 +57,7 @@ modkey = "Mod4"
 local layouts =
 {
     awful.layout.suit.floating,
-    awful.layout.suit.tile,
+    -- awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -283,7 +283,7 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
     -- new keyboard shortcuts
-    awful.key({ modkey, }, "l", function () awful.util.spawn("slimlock") end),
+    awful.key({ modkey, "Control" }, ";", function () awful.util.spawn("slimlock") end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
@@ -391,21 +391,24 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
-    -- tag 1
     { rule = { class = "Pcmanfm" },
       properties = { tag = tags[1][1] } },
     { rule = { class = "URxvt" },
       properties = { tag = tags[1][1] } },
     { rule = { class = "Gnome-terminal" },
       properties = { tag = tags[1][1] } },
-    -- tag 2
     { rule = { class = "Google-chrome-stable" },
       properties = { tag = tags[1][2], maximized = true } },
+    { rule = { class = "Google-earth" },
+      properties = { floating = true } },
+    { rule = { class = "Gvim" },
+      properties = { floating = true } },
     { rule = { class = "Vlc" },
-      properties = { tag = tags[1][2], floating = true } },
+      properties = { floating = true } },
     { rule = { class = "Transmission-gtk" },
-      properties = { tag = tags[1][2], floating = true } },
-    -- tag 3
+      properties = { floating = true } },
+    { rule = { class = "Viewnior" },
+      properties = { floating = true } },
     { rule = { class = "Spotify" },
       properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Rhythmbox" },
