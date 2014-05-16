@@ -403,7 +403,7 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "Gvim" },
       properties = { floating = true } },
-    { rule = { class = "Rosa-media-player" },
+    { rule = { class = "Vlc" },
       properties = { floating = true } },
     { rule = { class = "Transmission-gtk" },
       properties = { floating = true } },
@@ -421,11 +421,12 @@ awful.rules.rules = {
 
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
+local sloppy_focus = false
 client.connect_signal("manage", function (c, startup)
     -- Enable sloppy focus
     c:connect_signal("mouse::enter", function(c)
         if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
-            and awful.client.focus.filter(c) then
+            and awful.client.focus.filter(c) and sloppy_focus then
             client.focus = c
         end
     end)

@@ -42,7 +42,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'Valloric/YouCompleteMe'
+" NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'spolu/dwm.vim'
@@ -223,6 +223,7 @@ cno <C-e> <End>
 nn <silent> <leader>s :w!<CR>
 " Write all buffers and quit Vim
 nn <leader>qq :wa!<CR>:q<CR>
+nn <leader>a GVgg
 " Write read-only files
 cno W! w !sudo tee %
 cno ara ar **/*.*
