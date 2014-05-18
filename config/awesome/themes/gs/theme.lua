@@ -48,9 +48,10 @@ theme.font      = "Cantarell 11"
 
 --// Colors
 -- theme.fg_normal = "#808080"
-theme.fg_normal = "#BABDB6"
+theme.fg_normal = "#DFD5D5"
 -- theme.fg_focus  = "#286f8a"
-theme.fg_focus  = "#5d8d4f"
+-- theme.fg_focus  = "#5d8d4f"
+theme.fg_focus  = "#B84D4D"
 theme.fg_urgent = "#000000"
 -- theme.bg_normal = "#202020"
 theme.bg_normal = "#020202"
