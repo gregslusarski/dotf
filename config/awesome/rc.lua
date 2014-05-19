@@ -42,7 +42,7 @@ end
 beautiful.init(awful.util.getdir("config") .. "/themes/gs/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "gnome-terminal"
+terminal = "urxvt"
 editor = os.getenv("EDITOR") or "gvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -84,7 +84,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3}, s, layouts[1])
+    tags[s] = awful.tag({ 1, 2, 3, 4 }, s, layouts[1])
 end
 -- }}}
 

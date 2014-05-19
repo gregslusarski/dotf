@@ -589,7 +589,7 @@ augroup FTOptions
   " ftplugin
   au!
   au FileType lua nn <buffer> <F5> :!clear<CR>:!luajit %<CR>
-  au FileType moon nn <buffer> <F5> :!clear<CR>:!luajit ~/bin/moon %<CR>
+  au FileType moon nn <buffer> <F5> :!clear<CR>:!moon %<CR>
   " au FileType moon setl fdm=
   " au FileType markdown setl sw=4 sts=4
   " set nolist for quickfix window
