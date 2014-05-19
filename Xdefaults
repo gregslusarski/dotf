@@ -20,4 +20,17 @@ URxvt*color12: RoyalBlue
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*scrollstyle: rxvt
-URxvt.perl-ext-common: ...,tabbed,...
+/* urxvt-clipboard */
+/* URxvt.perl-ext-common: ...,clipboard,... */
+/* URxvt*perl-ext-common:  ...,selection-to-clipboard,... */
+
+/* URxvt.perl-ext-common: ...,tabbed,... */
+
+/* Install the urxvt-tabbedex package from AUR */
+/* URxvt.perl-ext-common: ...,tabbedex,... */
+/* URxvt.tabbed.autohide: true */
+/* URXvt.tabbed.reopen-on-close: yes */
+/* URxvt.keysym.Control-t: perl:tabbedex:new_tab */
+/* URxvt.keysym.Control-Tab: perl:tabbedex:next_tab */
+/* URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab */
+/* URxvt.tabbed.no-tabbedex-keys: true */
