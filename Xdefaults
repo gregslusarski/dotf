@@ -1,5 +1,6 @@
 URxvt*termName: xterm-256color
 URxvt*loginShell: true
+URxvt*depth: 32
 URxvt*fading: 20
 URxvt*transparent: false
 URxvt*tintColor: Dark Gray
@@ -7,6 +8,8 @@ URxvt*tintColor: Dark Gray
 URxvt*saveLines: 13000
 URxvt*foreground: Light Gray
 URxvt*background: Black
+/* URxvt*underlineURLs: true */
+/* URxvt*urlLauncher: google-chrome-stable */
 
 /* FONT SETTINGS */
 #URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=true
