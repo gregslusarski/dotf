@@ -156,7 +156,7 @@ set cmdheight=2
 set showmatch
 " Always show status line
 set laststatus=2
-set textwidth=79 wrap linebreak
+set textwidth=78 wrap linebreak
 " Backspace
 set backspace=indent,eol,start
 set complete-=i

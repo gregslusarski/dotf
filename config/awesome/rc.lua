@@ -400,7 +400,7 @@ awful.rules.rules = {
     { rule = { class = "Google-chrome-stable" },
       properties = { tag = tags[1][2], maximized = true } },
     { rule = { class = "Google-earth" },
-      properties = { floating = true } },
+      properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Gvim" },
       properties = { floating = true } },
     { rule = { class = "Vlc" },
