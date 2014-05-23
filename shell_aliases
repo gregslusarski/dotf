@@ -88,6 +88,7 @@ alias vdf='vimdiff'
 alias lj='luajit'
 # run moon file with luajit
 alias ljm='luajit /usr/bin/moon'
+alias mn='moon'
 
 alias less='less -R'
 
