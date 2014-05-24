@@ -401,6 +401,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][2], maximized = true } },
     { rule = { class = "Wine" },
       properties = { tag = tags[1][2], maximized = true } },
+    { rule = { class = "Pidgin" },
+      properties = { tag = tags[1][2], floating = true } },
     { rule = { class = "Google-earth" },
       properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Gvim" },
@@ -511,8 +513,8 @@ function run_once(prg,arg_string,pname,screen)
     end
 end
 
-run_once("clipit")
 run_once("redshift")
+run_once("clipit")
 run_once("pnmixer")
 run_once("dropboxd")
 run_once("synclient touchpadoff=1")

@@ -679,7 +679,7 @@ if has('gui_running')
     cd c:\
   endif
   set lines=38 columns=83
-  colorscheme skittles_dark
+  colorscheme detailed
   " Turn off menu, toolbar, scrollbars
   set guioptions=aegit
 else
