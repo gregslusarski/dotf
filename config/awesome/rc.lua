@@ -522,5 +522,6 @@ run_once("pcmanfm")
 run_once("urxvt")
 run_once("google-chrome-stable")
 run_once("spotify")
+run_once("pidgin")
 -- run_once("radiotray")
 -- }}}
