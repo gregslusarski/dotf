@@ -513,7 +513,6 @@ function run_once(prg,arg_string,pname,screen)
     end
 end
 
-run_once("redshift")
 run_once("clipit")
 run_once("pnmixer")
 run_once("dropboxd")
@@ -523,5 +522,6 @@ run_once("urxvt")
 run_once("google-chrome-stable")
 run_once("spotify")
 run_once("pidgin")
+run_once("redshift")
 -- run_once("radiotray")
 -- }}}
