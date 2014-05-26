@@ -45,6 +45,10 @@ source $HOME/.shell_aliases
 # This turns of zsh's "helpful" autocorrect feature
 unsetopt correct_all
 
-#complete -cf sudo
-#complete -cf man
+# report the status of backgrounds jobs immediately
+setopt notify
+
+# try to avoid the 'zsh: no matches found...'
+setopt nonomatch
+
 archey
