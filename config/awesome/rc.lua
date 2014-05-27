@@ -11,6 +11,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local vicious = require("vicious")
+-- install lain-git 1st!
 local lain = require("lain")
 
 -- {{{ Error handling
