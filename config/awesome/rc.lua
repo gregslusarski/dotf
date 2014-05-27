@@ -11,6 +11,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local vicious = require("vicious")
+local lain = require("lain")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -111,7 +112,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+-- mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock(" %a %d %b %H:%M ")
+-- calendar
+lain.widgets.calendar:attach(mytextclock, { font = "DejaVu Sans Mono", font_size = 10.5, icons = "", cal = "/usr/bin/cal -m" })
 
 -- Initialize widget
 cpuwidget = wibox.widget.textbox()
@@ -284,7 +288,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
     -- new keyboard shortcuts
     awful.key({ modkey, "Control" }, ";", function () awful.util.spawn("slimlock") end),
-
+    -- awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
@@ -496,21 +500,14 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
--- autostart
-function run_once(prg,arg_string,pname,screen)
-    if not prg then
-        do return nil end
-    end
-
-    if not pname then
-       pname = prg
-    end
-
-    if not arg_string then
-        awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. pname .. "' || (" .. prg .. ")",screen)
-    else
-        awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. pname .. " ".. arg_string .."' || (" .. prg .. " " .. arg_string .. ")",screen)
-    end
+-- {{{ Autostart applications
+function run_once(cmd)
+  findme = cmd
+  firstspace = cmd:find(" ")
+  if firstspace then
+     findme = cmd:sub(0, firstspace-1)
+  end
+  awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
 end
 
 run_once("pcmanfm")
