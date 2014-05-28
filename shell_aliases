@@ -35,7 +35,7 @@ alias fm='xdg-open .'
 
 # GIT # {{{1
 alias gup='git add . && git commit -m "Update" && git push'
-alias gcl='git clone'
+alias gclr='git clone --recursive'
 alias gi='git init'
 alias gps='git push'
 alias gpl='git pull'
