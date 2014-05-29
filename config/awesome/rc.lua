@@ -114,6 +114,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- {{{ Wibox
 -- Create a textclock widget
 -- mytextclock = awful.widget.textclock()
+os.setlocale("pl_PL.UTF-8", "time")
 mytextclock = awful.widget.textclock(" %a %d %b %H:%M ")
 -- calendar
 lain.widgets.calendar:attach(mytextclock, { font = "DejaVu Sans Mono", font_size = 10.5, icons = "", cal = "/usr/bin/cal -m" })
