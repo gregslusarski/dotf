@@ -122,3 +122,4 @@ alias df='df -h'
 # TOUCHPAD # {{{1
 alias touchon='synclient touchpadoff=0'
 alias touchoff='synclient touchpadoff=1'
+alias untar='tar -zxvf'
