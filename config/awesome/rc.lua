@@ -419,6 +419,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "Viewnior" },
       properties = { floating = true } },
+    { rule = { class = "Bleachbit" },
+      properties = { floating = true } },
     { rule = { class = "Spotify" },
       properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Rhythmbox" },
