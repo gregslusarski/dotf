@@ -18,7 +18,9 @@ alias soz='source ~/.zshrc && clear && archey'
 # alias _sr='sudo reboot'
 
 # BOOKMARKS # {{{1
-alias cdm='cd ~/Dropbox/coding/moon'
+alias cdmn='cd ~/Dropbox/coding/lua/moon'
+alias cdl='cd ~/Dropbox/coding/lua'
+alias cdd='cd ~/dotf'
 
 # ARCH # {{{1
 alias pup='pacaur -Syu'

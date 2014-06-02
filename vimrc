@@ -68,9 +68,9 @@ NeoBundleCheck
 " - Path"{{{2
 if has('vim_starting')
   " for testing out custom vim scripts
-  set rtp+=~/vim_test,~/vim_test/after
+  " set rtp+=~/vim_test,~/vim_test/after
   " my snippets, spell file etc.
-  set rtp+=~/Dropbox/dotfiles/vim
+  set rtp+=~/dotf/vim
 endif
 "}}}2
 " Enable syntax highlighting
