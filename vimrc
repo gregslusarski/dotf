@@ -672,7 +672,8 @@ endfun
 " -------------------------
 if has('gui_running')
   if has('unix')
-    set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
+    set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
+    " set guifont=Inconsolata\ 11
   elseif has('gui_win32') || has('gui_win64')
     let g:skip_loading_mswin=1
     set guifont=Droid_Sans_Mono:h10.2
