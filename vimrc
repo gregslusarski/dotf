@@ -16,11 +16,9 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-" NeoBundle 'farseer90718/vim-taskwarrior'
 NeoBundle 'leafo/moonscript-vim'
 NeoBundle 'viszu/vim-moon-fold'
 NeoBundle 'junegunn/vim-easy-align'
-" NeoBundle 'junegunn/vim-github-dashboard'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
@@ -28,38 +26,27 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'tpope/vim-obsession'
+" NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-git'
-" NeoBundle 'tpope/vim-rails'
-" NeoBundle 'tpope/vim-rake'
-" NeoBundle 'tpope/vim-endwise'
-" NeoBundle 'tpope/vim-vinegar'
-" NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'vim-scripts/Gundo'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'mileszs/ack.vim'
+" NeoBundle 'mileszs/ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
-" NeoBundle 'spolu/dwm.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'majutsushi/tagbar'
-" NeoBundle 'Lokaltog/vim-easymotion'
-" NeoBundle 'justinmk/vim-sneak'
-" NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'rking/vim-detailed'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'jeetsukumaran/vim-buffergator'
-" NeoBundle 'skalnik/vim-vroom'
 NeoBundle 'flazz/vim-colorschemes'
-" NeoBundle 'morhetz/gruvbox'
-NeoBundle 'tristen/vim-sparkup'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'jtratner/vim-flavored-markdown'
+" NeoBundle 'tristen/vim-sparkup'
+" NeoBundle 'tpope/vim-markdown'
+" NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundle 'viszu/vmath.vim'
 "}}}2
 " Filetype detection:ON, plugin:ON, indent:ON
@@ -67,9 +54,6 @@ filetype plugin indent on " required for plugin manager
 NeoBundleCheck
 " - Path"{{{2
 if has('vim_starting')
-  " for testing out custom vim scripts
-  " set rtp+=~/vim_test,~/vim_test/after
-  " my snippets, spell file etc.
   set rtp+=~/dotf/vim
 endif
 "}}}2
@@ -85,8 +69,6 @@ if has("multi_byte")
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 "}}}2
-" Use interactive shell
-" set shellcmdflag=-ic
 " Emulate typical editor navigation
 set nostartofline
 " Don't insert extra space(after .?!)
@@ -100,8 +82,8 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+set shiftround
 " set smarttab
-" set shiftround
 "}}}2
 " - Folding"{{{2
 set foldlevel=99
@@ -222,7 +204,7 @@ cno <C-e> <End>
 " Write current buffer
 nn <silent> <leader>s :w!<CR>
 " Write all buffers and quit Vim
-nn <leader>qq :wa!<CR>:q<CR>
+nn <leader>wq :wa!<CR>:q<CR>
 nn <leader>a GVgg
 " Write read-only files
 cno W! w !sudo tee %
@@ -249,8 +231,6 @@ nn k gk
 nn <F3> :setl spell! spell?<CR>
 " Toggle paste / nopaste
 nn <silent> <F4> :setl paste!<CR>
-" ino jk <Esc>
-" ino JK <Esc>
 " Center screen on next / prev found
 nn N Nzz
 nn n nzz
@@ -283,19 +263,6 @@ endif
 
 " = ABBREVIATIONS"{{{1
 cnorea H h
-cnorea hg helpg
-cnorea ag Ack --smart-case
-cnorea agt Ack --smart-case --text
-cnorea agr Ack --smart-case --ruby
-cnorea agp Ack --smart-case --python
-cnorea agv Ack --smart-case --vim
-cnorea agc Ack --smart-case --c
-cnorea hag AckHelp
-
-cnorea <silent> md !mkdir -p
-cnorea <silent> mf !touch
-cnorea <silent> .. cd ..
-cnorea <silent> - cd -
 
 " = PLUGINS SETTINGS & MAPPINGS"{{{1
 " ----------------------------------
@@ -304,13 +271,6 @@ no <silent> <leader>e :NR<CR>
 " - Vmath"{{{2
 vmap <expr> ++ VMATH_YankAndAnalyse()
 nmap ++ vip++
-
-" - Github-Dashboard"{{{2
-let g:github_dashboard = {}
-" Options: tab, top, bottom, above, below, left, right
-let g:github_dashboard['position'] = 'bottom'
-let g:github_dashboard['statusline'] = 0
-
 
 " - Lighline"{{{2
 let g:lightline = {
@@ -445,8 +405,8 @@ let g:vimshell_force_overwrite_statusline = 0
 
 
 " - Sparkup"{{{2
-let g:sparkupExecuteMapping='<leader>j'
-let g:sparkupNextMapping='<leader>n'
+" let g:sparkupExecuteMapping='<leader>j'
+" let g:sparkupNextMapping='<leader>n'
 " let g:sparkupPreviousMapping='<c-f>'
 
 
@@ -528,7 +488,7 @@ nn <silent> <F2> :GundoToggle<CR>
 
 
 " - Dwm"{{{2
-let g:dwm_master_pane_width="50%"
+" let g:dwm_master_pane_width="50%"
 
 
 " - Tagbar"{{{2
@@ -538,7 +498,7 @@ nn <silent> <F8> :TagbarOpenAutoClose<CR>
 
 
 " - EasyMotion"{{{2
-let g:EasyMotion_leader_key = '\'
+" let g:EasyMotion_leader_key = '\'
 " let g:EasyMotion_do_shade = 0
 
 
@@ -590,61 +550,12 @@ augroup FTOptions
   au!
   au FileType lua nn <buffer> <F5> :!clear<CR>:!luajit %<CR>
   au FileType moon nn <buffer> <F5> :!clear<CR>:!moon %<CR>
-  " au FileType moon setl fdm=
-  " au FileType markdown setl sw=4 sts=4
-  " set nolist for quickfix window
-  au FileType qf setl nolist
-  au FileType python setl fo=croql
   au FileType python nn <buffer> <F5> :!python %<CR>
-  au FileType c,cpp,cs,java setl fdm=syntax cin
-  au FileType git,gitcommit setl fdm=syntax
-  au FileType gitcommit setl spell
-  au FileType snippets set noet
-  " Ruby
-  au FileType ruby,eruby let ruby_fold = 1
-  " au FileType ruby,eruby let ruby_minlines = 500
-  au FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-  au FileType ruby,eruby let g:rubycomplete_rails = 1
-  au FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-  au FileType ruby,eruby setl tw=79 comments=:#\  isfname+=:
-  au FileType ruby,eruby nn <buffer> <F5> :!clear<CR>:!ruby %<CR>
-  au FileType ruby,eruby nn <buffer> <F9> :!clear<CR>:!rspec %<CR>
-  " Dispatch.vim
-  au FileType ruby,eruby let b:dispatch = 'rspec %'
-
-  au FileType ruby inorea ARB ActiveRecord::Base
-  au FileType ruby inorea AC ApplicationController
-  au FileType eruby :UltiSnipsAddFiletypes eruby.html
-
-  "html
   au FileType html nn <buffer> <F5> :!clear<CR>:!chromium-browser %<CR><CR>
 augroup END
 
 " = FUNCTIONS{{{1
 " ---------------
-
-" - CloseHiddenBuffers"{{{2
-" Wipe all buffers which are not active (i.e. not visible in a window/tab)
-nn <leader>ch :call CloseHiddenBuffers()<CR>
-command! -nargs=* Only call CloseHiddenBuffers()
-fun! CloseHiddenBuffers()
-  " figure out which buffers are visible in any tab
-  let visible = {}
-  for t in range(1, tabpagenr('$'))
-    for b in tabpagebuflist(t)
-      let visible[b] = 1
-    endfor
-  endfor
-  " close any buffer that are loaded and not visible
-  let l:tally = 0
-  for b in range(1, bufnr('$'))
-    if bufloaded(b) && !has_key(visible, b)
-      let l:tally += 1
-      exe 'bw ' . b
-    endif
-  endfor
-  echon "Deleted " . l:tally . " buffers"
-endfun
 
 " - CustomFoldText{{{2
 fun! CustomFoldText()
@@ -674,10 +585,6 @@ if has('gui_running')
   if has('unix')
     set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
     " set guifont=Inconsolata\ 11
-  elseif has('gui_win32') || has('gui_win64')
-    let g:skip_loading_mswin=1
-    set guifont=Droid_Sans_Mono:h10.2
-    cd c:\
   endif
   set lines=38 columns=83
   colorscheme detailed
@@ -692,15 +599,12 @@ endif
 
 " set background=dark
 colorscheme detailed
-" Make the 81st column stand out
-" hi ColorColumn ctermbg=red
-" call matchadd('ColorColumn', '\%81v', 100)
 " Get rid of the underline and bold in fold text
 hi Folded term=none gui=none
-if g:colors_name == 'skittles_dark'
-  hi LineNr gui=none guibg=#231F20 ctermbg=234 guifg=#5D8D8F ctermfg=66
-  hi CursorLineNr guifg=#5D8D8F ctermfg=66
-endif
+" if g:colors_name == 'skittles_dark'
+"   hi LineNr gui=none guibg=#231F20 ctermbg=234 guifg=#5D8D8F ctermfg=66
+"   hi CursorLineNr guifg=#5D8D8F ctermfg=66
+" endif
 " SignColumn will use same bg color as linenumber (GitGutter will set it)
 hi clear SignColumn
 " hi SignColumn ctermbg=0 guibg=DarkGrey
