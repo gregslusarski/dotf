@@ -35,7 +35,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git)
 
 export PATH=~/bin:$PATH
-export TERM=rxvt-256color
+export TERM=rxvt-unicode-256color
 
 export EDITOR="vim"
 

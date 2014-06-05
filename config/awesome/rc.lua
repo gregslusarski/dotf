@@ -401,8 +401,6 @@ awful.rules.rules = {
       properties = { tag = tags[1][1] } },
     { rule = { class = "URxvt" },
       properties = { tag = tags[1][1] } },
-    { rule = { class = "Gnome-terminal" },
-      properties = { tag = tags[1][1] } },
     { rule = { class = "Google-chrome-stable" },
       properties = { tag = tags[1][2], maximized = true } },
     { rule = { class = "Wine" },
