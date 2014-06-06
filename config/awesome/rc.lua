@@ -406,7 +406,7 @@ awful.rules.rules = {
     { rule = { class = "Wine" },
       properties = { tag = tags[1][2], maximized = true } },
     { rule = { class = "Pidgin" },
-      properties = { tag = tags[1][2], floating = true } },
+      properties = { tag = tags[1][3], floating = true } },
     { rule = { class = "Google-earth" },
       properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Gvim" },

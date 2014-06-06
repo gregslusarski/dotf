@@ -19,8 +19,8 @@ URxvt.perl-ext-common: default,clipboard
 /* FONT SETTINGS */
 /* URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=true */
 /* URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=12:antialias=true:hinting=true */
-/* URxvt.font: xft:DejaVu Sans Mono:pixelsize=13 */
-URxvt.font: xft:Inconsolata\-dz for Powerline:size=10
+/* URxvt.font: xft:DejaVu Sans Mono:size=10 */
+URxvt.font: xft:Inconsolata\-dz for Powerline:pixelsize=13
 /* URxvt.font: xft:Inconsolata:size=10 */
 /* xterm.faceName: Inconsolata\-dz for Powerline:style=dzForPowerline:pixelsize=14 */
 /* URxvt.font: xft:Inconsolata\-dz for Powerline:style=dzForPowerline */
@@ -36,7 +36,7 @@ URxvt.boldFont:
 Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintslight
-!Xft.dpi: 96
+/* Xft.dpi: 96 */
 Xft.rgba: rgb
 
 URxvt.color4: RoyalBlue
