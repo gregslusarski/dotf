@@ -117,7 +117,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 os.setlocale("pl_PL.UTF-8", "time")
 mytextclock = awful.widget.textclock(" %a %d %b %H:%M ")
 -- calendar
-lain.widgets.calendar:attach(mytextclock, { font = "Inconsolata-g", font_size = 10, icons = "", cal = "/usr/bin/cal -m" })
+lain.widgets.calendar:attach(mytextclock, { font = "Inconsolata-g", font_size = 10.5, icons = "", cal = "/usr/bin/cal -m" })
 
 -- Initialize widget
 cpuwidget = wibox.widget.textbox()
