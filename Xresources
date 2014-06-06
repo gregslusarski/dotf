@@ -21,7 +21,7 @@ URxvt.perl-ext-common: default,clipboard
 /* URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=12:antialias=true:hinting=true */
 /* URxvt.font: xft:DejaVu Sans Mono:size=10 */
 /* URxvt.font: xft:Inconsolata\-dz for Powerline:pixelsize=13 */
-URxvt.font: xft:Inconsolata\-g:size=10
+URxvt.font: xft:Inconsolata\-g:style=g:pixelsize=13
 /* xterm.faceName: Inconsolata\-dz for Powerline:style=dzForPowerline:pixelsize=14 */
 /* URxvt.font: xft:Inconsolata\-dz for Powerline:style=dzForPowerline */
 /* URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=14:antialias=true:hinting=true */
