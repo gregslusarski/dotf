@@ -583,7 +583,8 @@ endfun
 " -------------------------
 if has('gui_running')
   if has('unix')
-    set guifont=Inconsolata-dz\ for\ Powerline\ 10
+    set guifont=Inconsolata-g\ 10
+    " set guifont=Inconsolata-dz\ for\ Powerline\ 10
     " set guifont=Inconsolata\ 11
   endif
   set lines=38 columns=83
