@@ -207,7 +207,7 @@ nn <silent> <leader>s :w!<CR>
 nn <leader>wq :wa!<CR>:q<CR>
 nn <leader>a GVgg
 " Write read-only files
-cno W! w !sudo tee %
+cno w!! w !sudo tee >/dev/null %
 cno ara ar **/*.*
 " Close current buffer without closing window split
 cno bd bp\|bd #
