@@ -82,7 +82,7 @@ alias mcm='make -j$(grep -c ^processor /proc/cpuinfo) cmake'
 # VIM # {{{1
 alias v='vim'
 alias gv='gvim'
-alias sv='sudo vim'
+alias sv='sudoedit'
 alias vdf='vimdiff'
 
 # TMUX # {{{1
