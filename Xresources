@@ -20,6 +20,7 @@ URxvt.perl-ext-common: default,clipboard
 /* URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=true */
 /* URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=12:antialias=true:hinting=true */
 /* URxvt.font: xft:DejaVu Sans Mono:size=10 */
+/* URxvt.font: -*-inconsolata dz for powerline-medium-r-normal-*-13-*-*-*-*-*-iso8859-1 */
 URxvt.font: xft:Inconsolata\-dz for Powerline:pixelsize=13
 /* URxvt.font: xft:Inconsolata:size=10 */
 /* xterm.faceName: Inconsolata\-dz for Powerline:style=dzForPowerline:pixelsize=14 */
