@@ -289,7 +289,7 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
     -- new keyboard shortcuts
-    awful.key({ modkey, "Control" }, ";", function () awful.util.spawn("slimlock") end),
+    awful.key({ modkey, "Control" }, ";", function () awful.util.spawn_with_shell("sleep 1; xset dpms force off; slimlock") end),
     -- awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
