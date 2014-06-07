@@ -40,8 +40,10 @@ alias prns='sudo pacman -Rns $(pacman -Qdtq)'
 alias prs='sudo pacman -Rs $(pacman -Qdtq)'
 # Clean cache - delete all not currently installed package files
 alias pscc='sudo pacman -Scc'
-alias plp='expac "%n %m" -l'\n' -Q | sort -rhk 2 | less -R'
-alias plpi='pacman -Qet | wc -l && pacman -Qet | less -R'
+alias plp='expac -HM "%011m\t%-20n\t%10d" $( comm -23 <(pacman -Qqen|sort) <(pacman -Qqg base base-devel|sort) ) | sort -n'
+# list packages that are not in base/base-devel, installed manually by the user
+alias plpi='comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-devel|sort) | less -R'
+
 # VIM # {{{1
 alias vup='vim +"set nomore" +NeoBundleInstall! +NeoBundleClean! +qall'
 alias fm='xdg-open .'
