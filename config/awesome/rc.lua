@@ -139,8 +139,8 @@ vicious.register(memwidget, vicious.widgets.mem, function(widget, args)
 
 -- install acpi!
 batterywidget = wibox.widget.textbox()
--- batterywidget:set_text(" bat ")
-batterywidgettimer = timer({ timeout = 6 })
+batterywidget:set_text(" 100%")
+batterywidgettimer = timer({ timeout = 8 })
 batterywidgettimer:connect_signal("timeout",
   function()
     fh = assert(io.popen("acpi | cut -d, -f 2", "r"))
@@ -149,6 +149,25 @@ batterywidgettimer:connect_signal("timeout",
   end
 )
 batterywidgettimer:start()
+
+-- Wifi signal
+wifi_signal_widget = wibox.widget.textbox("?%")
+-- wifi_icon = wibox.widget.imagebox()
+function wifiInfo()
+    local wifiStrength = awful.util.pread("awk 'NR==3 {printf \"%d%%\\n\",($3/70)*100}' /proc/net/wireless")
+    if wifiStrength == "" then
+        -- wifi_icon:set_image(beautiful.wireless_down)
+        wifi_signal_widget:set_text("")
+    else
+        -- wifi_icon:set_image(beautiful.wireless)
+        wifi_signal_widget:set_text(" " .. wifiStrength)
+    end
+end
+wifiInfo()
+
+wifi_timer = timer({timeout=4})
+wifi_timer:connect_signal("timeout",wifiInfo)
+wifi_timer:start()
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -233,6 +252,7 @@ for s = 1, screen.count() do
     right_layout:add(cpuwidget)
     -- right_layout:add(memicon)
     right_layout:add(memwidget)
+    right_layout:add(wifi_signal_widget)
     right_layout:add(batterywidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
