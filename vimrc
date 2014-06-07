@@ -595,7 +595,7 @@ else
   " Terminal
   " set t_Co=256 "t_md=
   " Fix broken bg colors with tmux $TERM conflict"
-  set t_ut=
+  " set t_ut=
 endif
 
 " set background=dark

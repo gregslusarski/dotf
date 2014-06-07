@@ -23,12 +23,23 @@ alias cdl='cd ~/Dropbox/coding/lua'
 alias cdd='cd ~/dotf'
 
 # ARCH # {{{1
+# Synchronize with repositories and then upgrade packages
 alias pup='pacaur -Syu'
+# Install specific package(s) from the repositories
 alias ps='pacaur -S'
-alias prs='sudo pacman -Rs $(pacman -Qdtq)'
-alias prns='sudo pacman -Rns $(pacman -Qdtq)'
-alias pscc='sudo pacman -Scc'
+# Search for package(s) in the repositories
 alias pss='pacaur -Ss'
+# Display information about a given package in the repositories
+alias psi='pacaur -Si'
+# Search for package(s) in the local database
+alias pqs='pacaur -Qs'
+# List all files installed by a given package
+alias pql='pacaur -Ql'
+# Remove specified package(s), its configuration(s) and unneeded dependencies
+alias prns='sudo pacman -Rns $(pacman -Qdtq)'
+alias prs='sudo pacman -Rs $(pacman -Qdtq)'
+# Clean cache - delete all not currently installed package files
+alias pscc='sudo pacman -Scc'
 alias plp='expac "%n %m" -l'\n' -Q | sort -rhk 2 | less -R'
 alias plpi='pacman -Qet | wc -l && pacman -Qet | less -R'
 # VIM # {{{1
