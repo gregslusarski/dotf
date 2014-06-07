@@ -4,6 +4,7 @@
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
 sudo ln -s $script_dir/slim.conf /etc/
+sudo ln -s $script_dir/slimlock.conf /etc/
 sudo ln -s $script_dir/05-keyboard-layout.conf /etc/X11/xorg.conf.d/
 sudo ln -s $script_dir/20-nvidia.conf /etc/X11/xorg.conf.d/
 sudo ln -s $script_dir/makepkg.conf /etc
