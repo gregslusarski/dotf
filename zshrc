@@ -34,14 +34,6 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-export PATH=~/bin:$PATH
-export TERM=rxvt-unicode-256color
-
-export EDITOR="vim"
-
-source $ZSH/oh-my-zsh.sh
-source $HOME/.shell_aliases
-
 # This turns of zsh's "helpful" autocorrect feature
 unsetopt correct_all
 
@@ -51,7 +43,13 @@ setopt notify
 # try to avoid the 'zsh: no matches found...'
 setopt nonomatch
 
+export PATH=~/bin:$PATH
+export TERM=rxvt-unicode-256color
+export EDITOR="vim"
 export PAGER=${PAGER:-less}
+
+source $ZSH/oh-my-zsh.sh
+source $HOME/.shell_aliases
 
 # support colors in less
 export LESS_TERMCAP_mb=$'\E[01;31m'
