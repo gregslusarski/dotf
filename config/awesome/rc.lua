@@ -115,7 +115,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 -- mytextclock = awful.widget.textclock()
 os.setlocale("pl_PL.UTF-8", "time")
-mytextclock = awful.widget.textclock(" %a %d %b %H:%M ")
+mytextclock = awful.widget.textclock("  %a %d %b %H:%M  ")
 -- calendar
 lain.widgets.calendar:attach(mytextclock, { font = "Inconsolata-g", font_size = 10.5, icons = "", cal = "/usr/bin/cal -m" })
 
@@ -136,6 +136,19 @@ vicious.register(memwidget, vicious.widgets.mem, function(widget, args)
   return ("%02d%%"):format(args[1])end, 4)
 -- memicon = wibox.widget.imagebox()
 -- memicon:set_image(beautiful.mem)
+
+-- install acpi!
+batterywidget = wibox.widget.textbox()
+-- batterywidget:set_text(" bat ")
+batterywidgettimer = timer({ timeout = 6 })
+batterywidgettimer:connect_signal("timeout",
+  function()
+    fh = assert(io.popen("acpi | cut -d, -f 2", "r"))
+    batterywidget:set_text(fh:read("*l"))
+    fh:close()
+  end
+)
+batterywidgettimer:start()
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -220,6 +233,7 @@ for s = 1, screen.count() do
     right_layout:add(cpuwidget)
     -- right_layout:add(memicon)
     right_layout:add(memwidget)
+    right_layout:add(batterywidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
