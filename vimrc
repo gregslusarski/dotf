@@ -5,6 +5,7 @@ set nocompatible
 " NeoBundle"{{{2
 if has('vim_starting')
   set rtp+=~/.vim/bundle/neobundle.vim/
+  set rtp+=~/dotf/vim/
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
