@@ -124,7 +124,7 @@ cpuwidget = wibox.widget.textbox()
 -- Register widget
 -- vicious.register(cpuwidget, vicious.widgets.cpu, " $1%·")
 vicious.register(cpuwidget, vicious.widgets.cpu, function(widget, args)
-  return (" %02d%%·"):format(args[1])end)
+  return (" %02d%% "):format(args[1])end)
 -- cpuicon = wibox.widget.imagebox()
 -- cpuicon:set_image(awful.util.getdir("config") .. "/themes/gs/icons/cpu.png")
 

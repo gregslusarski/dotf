@@ -46,8 +46,8 @@ URxvt.color12: RoyalBlue
 URxvt.scrollBar: false
 URxvt.scrollstyle: rxvt
 /* URxvt.borderLess: true */
-URxvt.internalBorder: 0
-URxvt.externalBorder: 0
+/* URxvt.internalBorder: 0 */
+/* URxvt.externalBorder: 0 */
 /* URxvt.scrollBar_right: false */
 /* urxvt-clipboard */
 /* URxvt.perl-ext-common: ...,clipboard,... */
