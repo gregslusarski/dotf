@@ -138,17 +138,17 @@ vicious.register(memwidget, vicious.widgets.mem, function(widget, args)
 -- memicon:set_image(beautiful.mem)
 
 -- install acpi!
-batterywidget = wibox.widget.textbox()
-batterywidget:set_text(" 100%")
-batterywidgettimer = timer({ timeout = 8 })
-batterywidgettimer:connect_signal("timeout",
-  function()
-    fh = assert(io.popen("acpi | cut -d, -f 2", "r"))
-    batterywidget:set_text(fh:read("*l"))
-    fh:close()
-  end
-)
-batterywidgettimer:start()
+-- batterywidget = wibox.widget.textbox()
+-- batterywidget:set_text(" 100%")
+-- batterywidgettimer = timer({ timeout = 8 })
+-- batterywidgettimer:connect_signal("timeout",
+--   function()
+--     fh = assert(io.popen("acpi | cut -d, -f 2", "r"))
+--     batterywidget:set_text(fh:read("*l"))
+--     fh:close()
+--   end
+-- )
+-- batterywidgettimer:start()
 
 -- Wifi signal
 wifi_signal_widget = wibox.widget.textbox("?%")
@@ -253,7 +253,7 @@ for s = 1, screen.count() do
     -- right_layout:add(memicon)
     right_layout:add(memwidget)
     right_layout:add(wifi_signal_widget)
-    right_layout:add(batterywidget)
+    -- right_layout:add(batterywidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
