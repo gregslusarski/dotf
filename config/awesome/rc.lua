@@ -455,7 +455,7 @@ awful.rules.rules = {
     { rule = { class = "Bleachbit" },
       properties = { floating = true } },
     { rule = { class = "Spotify" },
-      properties = { tag = tags[1][3] } },
+      properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Rhythmbox" },
       properties = { tag = tags[1][3], floating = true } },
     -- Set Xterm as floating with a fixed position
