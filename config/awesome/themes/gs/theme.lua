@@ -42,8 +42,8 @@ end
 
 --/// Styles
 
---theme.font      = "Visitor TT1 BRK 8"
--- theme.font      = "Inconsolata 12"
+-- theme.font      = "Visitor TT1 BRK 8"
+-- theme.font      = "Inconsolata-g 11"
 theme.font      = "Cantarell 11"
 
 --// Colors
