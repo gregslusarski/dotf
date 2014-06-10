@@ -8,7 +8,7 @@ URxvt.tintColor: Dark Gray
 URxvt.saveLines: 13000
 URxvt.foreground: Light Gray
 URxvt.background: #020202
-/* tango colors */
+/* Tango colors */
 URxvt.color0:  #2E3436
 URxvt.color1:  #a40000
 URxvt.color2:  #4E9A06
