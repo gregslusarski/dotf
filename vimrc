@@ -204,6 +204,8 @@ ino <C-e> <C-o>$
 cno <C-e> <End>
 " Write current buffer
 nn <silent> <leader>s :w!<CR>
+" Quit without writing
+nn <leader>qq :qall!<CR>
 " Write all buffers and quit Vim
 nn <leader>wq :wa!<CR>:q<CR>
 nn <leader>a GVgg
