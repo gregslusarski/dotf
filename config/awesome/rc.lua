@@ -557,6 +557,6 @@ run_once("spotify")
 run_once("pidgin")
 run_once("redshift")
 run_once("urxvt")
-run_once("spotify-admute")
+run_once("spotimute")
 -- run_once("radiotray")
 -- }}}

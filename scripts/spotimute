@@ -1,8 +1,8 @@
 #!/bin/bash
 
+pactl set-sink-mute 0 no
 was_paused=0 # if last state was paused
 ad=0 # if an ad is probably playing right now
-
 while true; do
     num=$(pactl list | grep -E '(^Sink Input)|(media.name = \"Spotify\"$)' | awk '/Spotify/ {print a} {a = $0}' | cut -c 13-)
 
