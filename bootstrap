@@ -26,4 +26,5 @@ ln -s $script_dir/user-dirs.dirs ~/.config/
 ln -s $script_dir/mimeapps.list ~/.local/share/applications/
 ln -s $script_dir/config/awesome ~/.config/
 ln -s $script_dir/config/redshift.conf ~/.config/
+ln -s $script_dir/config/pcmanfm.conf ~/.config/pcmanfm/default/
 ln -s $script_dir/config/rediotray.xml ~/.local/share/radiotray/bookmarks.xml
