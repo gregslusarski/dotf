@@ -434,8 +434,6 @@ awful.rules.rules = {
       properties = { tag = tags[1][1], floating = false, size_hints_honor = false } },
     { rule = { class = "Google-chrome-stable" },
       properties = { tag = tags[1][2], maximized = true } },
-    { rule = { class = "Wine" },
-      properties = { tag = tags[1][2], maximized = true } },
     { rule = { class = "Google-earth" },
       properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Spotify" },
