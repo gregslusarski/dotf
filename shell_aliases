@@ -123,13 +123,13 @@ alias agc='ack-grep --c'
 # FIND FILE / DIR # {{{1
 alias ff='sudo find / -type f -name'
 alias fd='sudo find / -type d -name'
-
 # CREATE FILE / DIR # {{{1
 alias mf='touch'
 alias md='mkdir -p'
 
 # DU / DF (FILE / DISK SPACE USAGE) # {{{1
-alias du='du -hs * | sort -h'
+alias duu='sudo du -a $(pwd) | sort -n -r | head -n 20'
+alias du='du -hs * | sort -n -r'
 alias df='df -h'
 
 # TOUCHPAD # {{{1
