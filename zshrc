@@ -37,6 +37,9 @@ plugins=(vi-mode git)
 # Vi-mode
 bindkey -v
 export KEYTIMEOUT=1
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^r' history-incremental-search-backward
 
 # This turns of zsh's "helpful" autocorrect feature
 unsetopt correct_all
