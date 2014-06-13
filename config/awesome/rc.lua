@@ -323,6 +323,7 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
     -- new keyboard shortcuts
+    awful.key({ modkey,           }, "Delete", function () awful.util.spawn("xkill") end),
     awful.key({ modkey, "Control" }, ";", function () awful.util.spawn("slimlock") end),
     -- awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
     -- Prompt

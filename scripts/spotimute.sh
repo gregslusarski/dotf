@@ -1,12 +1,13 @@
 #!/bin/bash
+# Updated from https://gist.github.com/pcworld/3198763/#comment-857143
 
-pactl set-sink-mute 0 no
 was_paused=0 # if last state was paused
 ad=0 # if an ad is probably playing right now
+
 while true; do
     num=$(pactl list | grep -E '(^Sink Input)|(media.name = \"Spotify\"$)' | awk '/Spotify/ {print a} {a = $0}' | cut -c 13-)
-
-    icon_name=$(xprop -name 'Spotify - Linux Preview' _NET_WM_ICON_NAME | cut -d \" -f 2)
+    #icon_name=$(xprop -name 'Spotify - Linux Preview' _NET_WM_ICON_NAME | cut -d \" -f 2)
+    icon_name=$(xprop -name 'Spotify - Linux Preview' WM_ICON_NAME | awk -F"– " '{print $2}' | cut -d \" -f 1)
     song_name=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify / org.freedesktop.MediaPlayer2.GetMetadata | grep xesam:title -A 1 | grep variant | cut -d \" -f 2)
 
     if [[ "$song_name" && "$icon_name" =~ "$song_name" ]]; then
@@ -22,7 +23,8 @@ while true; do
         pactl set-sink-input-mute $num yes
     fi
 
-    if [ "$icon_name" = "Spotify" ]; then
+    #if [ "$icon_name" = "Spotify" ]; then
+    if [ -z "$icon_name" ]; then
         was_paused=1
     else
         was_paused=0
