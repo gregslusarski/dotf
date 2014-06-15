@@ -17,6 +17,7 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
+NeoBundle 'JuliaLang/julia-vim'
 NeoBundle 'leafo/moonscript-vim'
 NeoBundle 'viszu/vim-moon-fold'
 NeoBundle 'junegunn/vim-easy-align'
@@ -551,6 +552,7 @@ augroup END
 augroup FTOptions
   " ftplugin
   au!
+  au FileType julia nn <buffer> <F5> :!clear<CR>:!julia %<CR>
   au FileType lua nn <buffer> <F5> :!clear<CR>:!luajit %<CR>
   au FileType moon nn <buffer> <F5> :!clear<CR>:!moon %<CR>
   au FileType python nn <buffer> <F5> :!python %<CR>

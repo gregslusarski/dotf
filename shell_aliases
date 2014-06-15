@@ -18,7 +18,7 @@ alias soz='source ~/.zshrc && clear && archey'
 # alias _sr='sudo reboot'
 
 # BOOKMARKS # {{{1
-alias cdmn='cd ~/Dropbox/coding/lua/moon'
+alias cdj='cd ~/Dropbox/coding/julia'
 alias cdl='cd ~/Dropbox/coding/lua'
 alias cdd='cd ~/dotf'
 
@@ -102,21 +102,16 @@ alias vdf='vimdiff'
 #alias tmux='TERM=screen-256color-bce tmux'
 #alias t='TERM=screen-256color-bce tmux'
 
-alias lj='luajit'
-# run moon file with luajit
-alias ljm='luajit /usr/bin/moon'
-alias mn='moon'
-
-alias less='less -R'
+alias jl='julia'
 
 # ACK-GREP # {{{1
-alias ack='ack-grep'
-alias ag='ack-grep'
-alias agt='ack-grep --text'
-alias agl='ack-grep --lua'
-alias agm='ack-grep --moon'
-alias agv='ack-grep --vim'
-alias agc='ack-grep --c'
+# alias ack='ack-grep'
+# alias ag='ack-grep'
+# alias agt='ack-grep --text'
+# alias agl='ack-grep --lua'
+# alias agm='ack-grep --moon'
+# alias agv='ack-grep --vim'
+# alias agc='ack-grep --c'
 # alias agr='ack-grep --ruby'
 # alias agp='ack-grep --python'
 
