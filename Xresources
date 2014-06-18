@@ -6,8 +6,6 @@ URxvt.transparent: false
 URxvt.tintColor: Dark Gray
 /* URxvt.shading: 40 */
 URxvt.saveLines: 13000
-URxvt.foreground: Light Gray
-URxvt.background: #020202
 /* Tango colors */
 URxvt.color0:  #2E3436
 URxvt.color1:  #a40000
@@ -27,6 +25,9 @@ URxvt.color14: #fcaf3e
 URxvt.color15: #EEEEEC
 
 URxvt.color16: #020202
+URxvt.foreground: #888a85
+URxvt.background: #020202
+/* URxvt.cursorColor: Light Gray */
 /* Plugins */
 URxvt.perl-ext-common: default,clipboard,tabbed
 /* Tabbed plugin colors */
