@@ -25,7 +25,15 @@ URxvt.color12: #729FCF
 URxvt.color13: #AD7FA8
 URxvt.color14: #fcaf3e
 URxvt.color15: #EEEEEC
-URxvt.perl-ext-common: default,clipboard
+
+URxvt.color16: #020202
+/* Plugins */
+URxvt.perl-ext-common: default,clipboard,tabbed
+/* Tabbed plugin colors */
+URxvt.tabbed.tabbar-fg: 0
+URxvt.tabbed.tabbar-bg: 16
+URxvt.tabbed.tab-fg: 16
+URxvt.tabbed.tab-bg: 0
 /* URxvt.iso14755: false */
 /* URxvt.url-select.launcher: google-chrome-stable */
 /* URxvt.url-select.underline: true */
