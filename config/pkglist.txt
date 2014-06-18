@@ -81,6 +81,7 @@ iproute2
 iputils
 iw
 jfsutils
+keepassx
 less
 lib32-alsa-lib
 lib32-alsa-plugins
@@ -175,6 +176,7 @@ systemd-sysvcompat
 tar
 texinfo
 tidyhtml
+tk
 tlp
 transmission-gtk
 tree
@@ -212,6 +214,7 @@ xfsprogs
 xorg-server
 xorg-server-utils
 xorg-xinit
+xorg-xkill
 xorg-xprop
 zip
 zsh
