@@ -27,7 +27,6 @@ URxvt.color15: #EEEEEC
 URxvt.color16: #020202
 URxvt.foreground: #d8d8d8
 URxvt.background: #020202
-/* URxvt.cursorColor: Light Gray */
 /* Plugins */
 URxvt.perl-ext-common: default,clipboard,tabbed
 /* Tabbed plugin colors */
