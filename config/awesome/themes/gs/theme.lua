@@ -47,8 +47,8 @@ end
 theme.font      = "Cantarell 11"
 
 --// Colors
--- theme.fg_normal = "#808080"
-theme.fg_normal = "#DFD5D5"
+theme.fg_normal = "#d8d8d8"
+-- theme.fg_normal = "Light Gray"
 -- theme.fg_focus  = "#286f8a"
 -- theme.fg_focus  = "#5d8d4f"
 theme.fg_focus  = "#B84D4D"
@@ -68,7 +68,7 @@ theme.border_marked = "#000000"
 --//
 
 --// Titlebars
-theme.titlebar_fg_normal  = "#808080"
+theme.titlebar_fg_normal  = theme.fg_normal
 theme.titlebar_fg_focus   = "#ffffff"
 theme.titlebar_bg_normal  = "#363636ff"
 theme.titlebar_bg_focus   = "#000000ff"
