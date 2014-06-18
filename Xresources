@@ -25,7 +25,7 @@ URxvt.color14: #fcaf3e
 URxvt.color15: #EEEEEC
 
 URxvt.color16: #020202
-URxvt.foreground: Gray
+URxvt.foreground: Light Gray
 URxvt.background: #020202
 /* URxvt.cursorColor: Light Gray */
 /* Plugins */
