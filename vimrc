@@ -18,8 +18,9 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'JuliaLang/julia-vim'
-NeoBundle 'leafo/moonscript-vim'
-NeoBundle 'viszu/vim-moon-fold'
+" NeoBundle 'viszu/vim-julia-fold'
+" NeoBundle 'leafo/moonscript-vim'
+" NeoBundle 'viszu/vim-moon-fold'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-unimpaired'
