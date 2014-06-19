@@ -540,6 +540,7 @@ augroup END
 augroup FTCheck
   " filetype.vim
   au!
+  au BufEnter *.jl setl commentstring=#%s
   au BufNewFile,BufRead TODO,HELP,LINKS,NOTES,MUSIC if &ft == ""
     \ | set ft=markdown|endif
   " Move tasks todo <-> done
