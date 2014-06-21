@@ -40,7 +40,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'rking/vim-detailed'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'jeetsukumaran/vim-buffergator'
-" NeoBundle 'morhetz/gruvbox'
+NeoBundle 'morhetz/gruvbox'
 " NeoBundle 'tpope/vim-obsession'
 " NeoBundle 'scrooloose/nerdtree'
 " NeoBundle 'mileszs/ack.vim'
@@ -122,6 +122,7 @@ if &listchars ==# 'eol:$'
 endif
 " }}}2
 " Search stuff
+" set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -189,6 +190,7 @@ for prefix in ['i', 'n', 'v']
 endfor
 nn <Space> za
 nn Q <Nop>
+" nn <leader>/ :nohlsearch<CR>
 " nno ; :
 " nno : ;
 let mapleader = ','
@@ -612,6 +614,7 @@ endif
 colorscheme detailed
 " Get rid of the underline and bold in fold text
 hi Folded term=none gui=none
+hi Normal ctermfg=223 guifg=#ebdbb2
 " if g:colors_name == 'skittles_dark'
 "   hi LineNr gui=none guibg=#231F20 ctermbg=234 guifg=#5D8D8F ctermfg=66
 "   hi CursorLineNr guifg=#5D8D8F ctermfg=66

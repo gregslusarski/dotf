@@ -23,9 +23,9 @@ URxvt.color12: #729FCF
 URxvt.color13: #AD7FA8
 URxvt.color14: #fcaf3e
 URxvt.color15: #EEEEEC
-
 URxvt.color16: #020202
-URxvt.foreground: #d8d8d8
+/* URxvt.foreground: #d8d8d8 */
+URxvt.foreground: #ebdbb2
 URxvt.background: #020202
 /* Plugins */
 URxvt.perl-ext-common: default,clipboard,tabbed
