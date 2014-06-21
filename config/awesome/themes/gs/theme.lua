@@ -47,7 +47,8 @@ end
 theme.font      = "Cantarell 11"
 
 --// Colors
-theme.fg_normal = "#d8d8d8"
+theme.fg_normal = "#ebdbb2"
+-- theme.fg_normal = "#d8d8d8"
 -- theme.fg_normal = "Light Gray"
 -- theme.fg_focus  = "#286f8a"
 -- theme.fg_focus  = "#5d8d4f"
