@@ -18,10 +18,9 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'JuliaLang/julia-vim'
-" NeoBundle 'viszu/vim-julia-fold'
-" NeoBundle 'leafo/moonscript-vim'
-" NeoBundle 'viszu/vim-moon-fold'
+NeoBundle 'godlygeek/tabular'
 NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
@@ -29,28 +28,31 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-dispatch'
-" NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-git'
 NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'godlygeek/tabular'
 NeoBundle 'vim-scripts/Gundo'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'scrooloose/nerdtree'
-" NeoBundle 'mileszs/ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'majutsushi/tagbar'
 NeoBundle 'rking/vim-detailed'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'jeetsukumaran/vim-buffergator'
-NeoBundle 'flazz/vim-colorschemes'
+" NeoBundle 'morhetz/gruvbox'
+" NeoBundle 'tpope/vim-obsession'
+" NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'mileszs/ack.vim'
+" NeoBundle 'majutsushi/tagbar'
+" NeoBundle 'viszu/vim-julia-fold'
+" NeoBundle 'leafo/moonscript-vim'
+" NeoBundle 'viszu/vim-moon-fold'
+" NeoBundle 'flazz/vim-colorschemes'
 " NeoBundle 'tristen/vim-sparkup'
 " NeoBundle 'tpope/vim-markdown'
 " NeoBundle 'jtratner/vim-flavored-markdown'
-NeoBundle 'viszu/vmath.vim'
+" NeoBundle 'viszu/vmath.vim'
 "}}}2
 " Filetype detection:ON, plugin:ON, indent:ON
 filetype plugin indent on " required for plugin manager
@@ -215,8 +217,8 @@ nn <leader>a GVgg
 cno w!! w !sudo tee >/dev/null %
 cno ara ar **/*.*
 " Close current buffer without closing window split
-cno bd bp\|bd #
-cno bd! bp\|bd! #
+" cno bd bp\|bd #
+" cno bd! bp\|bd! #
 " Reselect visual block after indent/outdent
 vn < <gv
 vn > >gv
@@ -445,11 +447,11 @@ nn <silent> <leader>gp :Git push<CR>
 
 
 " - NERDTree"{{{2
-nn <silent> <C-e> :NERDTreeToggle<CR>
-let g:NERDTreeShowBookmarks=1
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeChDirMode=0
-let g:NERDTreeQuitOnOpen=1
+" nn <silent> <C-e> :NERDTreeToggle<CR>
+" let g:NERDTreeShowBookmarks=1
+" let g:NERDTreeMinimalUI=1
+" let g:NERDTreeChDirMode=0
+" let g:NERDTreeQuitOnOpen=1
 " let g:NERDTreeHijackNetrw=0
 " let g:NERDTreeShowHidden=1
 
@@ -606,6 +608,7 @@ else
 endif
 
 " set background=dark
+" colorscheme gruvbox
 colorscheme detailed
 " Get rid of the underline and bold in fold text
 hi Folded term=none gui=none
