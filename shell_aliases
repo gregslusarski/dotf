@@ -17,11 +17,6 @@ alias soz='source ~/.zshrc && clear && archey'
 # alias _ss='sudo shutdown -h now'
 # alias _sr='sudo reboot'
 
-# BOOKMARKS # {{{1
-alias cdj='cd ~/Dropbox/coding/julia'
-alias cdl='cd ~/Dropbox/coding/lua'
-alias cdd='cd ~/dotf'
-
 # ARCH # {{{1
 # Synchronize with repositories and then upgrade packages
 alias pup='pacaur -Syu'
