@@ -4,6 +4,8 @@
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
 mkdir -p ~/bin
+mkdir -p ~/.vim/UltiSnips
+ln -s $script_dir/vim/UltiSnips/julia.snippets ~/.vim/UltiSnips/
 ln -s $script_dir/scripts/mr ~/bin/
 ln -s $script_dir/scripts/ssha ~/bin/
 ln -s $script_dir/scripts/capscr ~/bin/
