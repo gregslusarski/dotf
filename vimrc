@@ -18,6 +18,7 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'JuliaLang/julia-vim'
+NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'tpope/vim-vinegar'
