@@ -433,7 +433,7 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-s-l>"
-" let g:UltiSnipsSnippetsDir="~/dotfiles/vim/UltiSnips"
+let g:UltiSnipsSnippetsDir="~/dotf/vim/UltiSnips"
 " let g:UltiSnipsSnippetDirectories=["Ultisnips"]
 let g:snips_author="viszu"
 " Since this ultisnips fork can also use snipmate snips, prefer ultisnips snips
