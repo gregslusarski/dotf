@@ -431,9 +431,9 @@ awful.rules.rules = {
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
     { rule = { class = "Pcmanfm" },
-      properties = { tag = tags[1][1], floating = false } },
+      properties = { floating = false } },
     { rule = { class = "URxvt" },
-      properties = { tag = tags[1][1], floating = false, size_hints_honor = false } },
+      properties = { floating = false, size_hints_honor = false } },
     { rule = { class = "Google-chrome-stable" },
       properties = { tag = tags[1][2], maximized = true } },
     { rule = { class = "Google-earth" },
@@ -538,6 +538,7 @@ run_once("dropboxd")
 run_once("synclient touchpadoff=1")
 run_once("google-chrome-stable")
 run_once("spotify")
+run_once("rhythmbox")
 run_once("redshift")
 run_once("urxvt")
 run_once("pidgin")
