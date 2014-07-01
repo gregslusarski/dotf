@@ -60,7 +60,7 @@ filetype plugin indent on " required for plugin manager
 NeoBundleCheck
 " - Path"{{{2
 if has('vim_starting')
-  set rtp+=~/dotf/vim
+  set rtp+=~/dotf/vim/
 endif
 "}}}2
 " Enable syntax highlighting
@@ -123,7 +123,7 @@ if &listchars ==# 'eol:$'
 endif
 " }}}2
 " Search stuff
-" set hlsearch
+set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -191,6 +191,7 @@ for prefix in ['i', 'n', 'v']
 endfor
 nn <Space> za
 nn Q <Nop>
+nno <silent> <leader>l :nohls<CR>
 " nn <leader>/ :nohlsearch<CR>
 " nno ; :
 " nno : ;
