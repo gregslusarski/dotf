@@ -1,21 +1,25 @@
 snippet #!
 #! /usr/bin/julia
-
-$0
 endsnippet
 
 snippet fu
-function ${1:\$name}(${2:\$args})
+function ${1:\$name}(${2:args...})
 	${3:\$body}
 end
+endsnippet
 
-$0
+snippet ma
+macro ${1:\$name}(${2:args...})
+	${3:\$body}
+end
 endsnippet
 
 snippet mo
 module ${1:\$name}
+
 ${2:\$body}
-end
+
+end # module
 endsnippet
 
 snippet ty

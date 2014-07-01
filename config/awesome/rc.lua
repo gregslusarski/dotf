@@ -252,7 +252,7 @@ for s = 1, screen.count() do
     right_layout:add(cpuwidget)
     -- right_layout:add(memicon)
     right_layout:add(memwidget)
-    right_layout:add(wifi_signal_widget)
+    -- right_layout:add(wifi_signal_widget)
     -- right_layout:add(batterywidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
