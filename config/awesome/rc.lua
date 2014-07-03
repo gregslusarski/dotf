@@ -86,7 +86,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4 }, s, layouts[1])
+    tags[s] = awful.tag({1, 2, 3, 4}, s, layouts[1])
 end
 -- }}}
 
@@ -112,6 +112,8 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- {{{ Wibox
+archlogo = wibox.widget.imagebox()
+archlogo:set_image(awful.util.getdir("config") .. "/themes/gs/icons/archlinux.svg")
 -- Create a textclock widget
 -- mytextclock = awful.widget.textclock()
 os.setlocale("pl_PL.UTF-8", "time")
@@ -241,6 +243,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
+    left_layout:add(archlogo)
     left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
