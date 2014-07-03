@@ -104,7 +104,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+mylauncher = awful.widget.launcher({ image = awful.util.getdir("config") .. "/themes/gs/icons/archlinux.svg",
                                      menu = mymainmenu })
 
 -- Menubar configuration
@@ -112,8 +112,8 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- {{{ Wibox
-archlogo = wibox.widget.imagebox()
-archlogo:set_image(awful.util.getdir("config") .. "/themes/gs/icons/archlinux.svg")
+spacer = wibox.widget.textbox()
+spacer:set_text(" ")
 -- Create a textclock widget
 -- mytextclock = awful.widget.textclock()
 os.setlocale("pl_PL.UTF-8", "time")
@@ -243,9 +243,10 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
-    left_layout:add(archlogo)
     left_layout:add(mylauncher)
+    left_layout:add(spacer)
     left_layout:add(mytaglist[s])
+    left_layout:add(spacer)
     left_layout:add(mypromptbox[s])
 
     -- Widgets that are aligned to the right
