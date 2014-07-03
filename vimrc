@@ -191,7 +191,7 @@ for prefix in ['i', 'n', 'v']
 endfor
 nn <Space> za
 nn Q <Nop>
-nno <silent> <leader>l :nohls<CR>
+nn <silent> <leader>l :nohls<CR>
 " nn <leader>/ :nohlsearch<CR>
 " nno ; :
 " nno : ;
