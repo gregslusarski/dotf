@@ -17,6 +17,7 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
+NeoBundle 'bogado/file-line'
 NeoBundle 'JuliaLang/julia-vim'
 NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'godlygeek/tabular'
