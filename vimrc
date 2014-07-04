@@ -22,7 +22,6 @@ NeoBundle 'JuliaLang/julia-vim'
 NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
@@ -43,9 +42,10 @@ NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'rking/vim-detailed'
 NeoBundle 'morhetz/gruvbox'
+NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'tpope/vim-vinegar'
 " NeoBundle 'ajh17/VimCompletesMe'
 " NeoBundle 'tpope/vim-obsession'
-" NeoBundle 'scrooloose/nerdtree'
 " NeoBundle 'mileszs/ack.vim'
 " NeoBundle 'majutsushi/tagbar'
 " NeoBundle 'viszu/vim-julia-fold'
@@ -178,10 +178,12 @@ if &history < 1000
   set history=1000
 endif
 " Netrw stuff
-if !exists('g:netrw_list_hide')
-  let g:netrw_list_hide = '^\.,\~$,^tags$'
-endif
-let g:matchparen_insert_timeout=5
+" if !exists('g:netrw_list_hide')
+  " let g:netrw_list_hide = '^\.,\~$,^tags$'
+" endif
+" hide quick help, toggle with 'I'
+" let g:netrw_banner = 0
+" let g:matchparen_insert_timeout=5
 
 " = MAPPINGS"{{{1
 " --------------
@@ -194,6 +196,7 @@ endfor
 nn <Space> za
 nn Q <Nop>
 nn <silent> <leader>l :nohls<CR>
+" nn <silent> - :Ex<CR>
 " nn <leader>/ :nohlsearch<CR>
 " nno ; :
 " nno : ;
@@ -453,13 +456,13 @@ nn <silent> <leader>gp :Git push<CR>
 
 
 " - NERDTree"{{{2
-" nn <silent> <C-e> :NERDTreeToggle<CR>
-" let g:NERDTreeShowBookmarks=1
-" let g:NERDTreeMinimalUI=1
-" let g:NERDTreeChDirMode=0
-" let g:NERDTreeQuitOnOpen=1
-" let g:NERDTreeHijackNetrw=0
-" let g:NERDTreeShowHidden=1
+nn <silent> - :NERDTreeToggle<CR>
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeChDirMode=0
+let g:NERDTreeQuitOnOpen=1
+let g:NERDTreeHijackNetrw=0
+let g:NERDTreeShowHidden=0
 
 
 " - CtrlP"{{{2
