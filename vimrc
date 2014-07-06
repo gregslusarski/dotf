@@ -195,7 +195,7 @@ for prefix in ['i', 'n', 'v']
 endfor
 nn <Space> za
 nn Q <Nop>
-nn <silent> <leader>l :nohls<CR>
+nn <silent> <C-l> :noh<CR><C-l>
 " nn <silent> - :Ex<CR>
 " nn <leader>/ :nohlsearch<CR>
 " nno ; :
@@ -203,11 +203,11 @@ nn <silent> <leader>l :nohls<CR>
 let mapleader = ','
 let maplocalleader = '\\'
 " Window navigation
-nn <C-h> <C-w>h
-nn <C-j> <C-w>j
-nn <C-k> <C-w>k
-nn <C-l> <C-w>l
 nn <C-c> <C-w>c
+" nn <C-h> <C-w>h
+" nn <C-j> <C-w>j
+" nn <C-k> <C-w>k
+" nn <C-l> <C-w>l
 " Be consistent with bash
 " Go to the 1st non blank
 ino <C-a> <C-o>^
