@@ -32,14 +32,14 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode git)
+plugins=(git)
 
 # Vi-mode
-bindkey -v
-export KEYTIMEOUT=1
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^r' history-incremental-search-backward
+# bindkey -v
+# export KEYTIMEOUT=1
+# bindkey '^P' up-history
+# bindkey '^N' down-history
+# bindkey '^r' history-incremental-search-backward
 
 # This turns of zsh's "helpful" autocorrect feature
 unsetopt correct_all
