@@ -12,7 +12,7 @@ sudo ln -s $script_dir/20-nvidia.conf /etc/X11/xorg.conf.d/
 sudo ln -s $script_dir/makepkg.conf /etc
 sudo ln -s $script_dir/locale.conf /etc
 sudo ln -s $script_dir/mirrorlist /etc/pacman.d/
-sudo ln -s $script_dir/pacaur_config /etc/xdg/pacaur/config
+# sudo ln -s $script_dir/pacaur_config /etc/xdg/pacaur/config
 ln -s $script_dir/scripts/mr ~/bin/
 ln -s $script_dir/scripts/ssha ~/bin/
 ln -s $script_dir/scripts/capscr ~/bin/
