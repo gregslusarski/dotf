@@ -28,14 +28,39 @@ type ${1:\$name}
 end
 endsnippet
 
+snippet inc
+include("${1:\$filename}.jl")
+endsnippet
+
 snippet us
-using ${1:\$what}
+using ${1:\$modulename}
 endsnippet
 
 snippet im
-import ${1:\$what}
+import ${1:\$modulename}
 endsnippet
 
 snippet ex
-export ${1:\$what}
+export ${1:\$names...}
+endsnippet
+
+snippet fo
+for ${1:\$e} in ${2:\$collection}
+	${3:\$body}
+end
+endsnippet
+
+snippet wh
+while ${1:\$condition}
+	${2:\$body}
+	${3:\$counter}
+end
+endsnippet
+
+snippet pr
+print("${1}")
+endsnippet
+
+snippet prl
+println("${1}")
 endsnippet
