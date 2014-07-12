@@ -28,6 +28,12 @@ type ${1:\$name}
 end
 endsnippet
 
+snippet imm
+immutable ${1:\$name}
+	${2:\$body}
+end
+endsnippet
+
 snippet inc
 include("${1:\$filename}.jl")
 endsnippet
@@ -38,6 +44,10 @@ endsnippet
 
 snippet im
 import ${1:\$modulename}
+endsnippet
+
+snippet ima
+importall ${1:\$modulename}
 endsnippet
 
 snippet ex

@@ -446,6 +446,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][3], maximized = true } },
     { rule = { class = "Rhythmbox" },
       properties = { tag = tags[1][3] } },
+    { rule = { class = "Pidgin" },
+      properties = { tag = tags[1][2] } },
     -- Set Xterm as floating with a fixed position
     --  { rule = { class = "XTerm" }, properties = {floating = true}, callback
     --  = function(c) c:geometry({x=0, y=0}) end},}

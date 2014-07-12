@@ -97,7 +97,7 @@ alias vdf='vimdiff'
 #alias tmux='TERM=screen-256color-bce tmux'
 #alias t='TERM=screen-256color-bce tmux'
 
-alias jl='julia'
+alias jl='cd julia && julia'
 
 # ACK-GREP # {{{1
 # alias ack='ack-grep'
