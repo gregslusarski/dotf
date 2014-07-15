@@ -22,6 +22,7 @@ ln -s $script_dir/zshrc ~/.zshrc
 ln -s $script_dir/shell_aliases ~/.shell_aliases
 ln -s $script_dir/vimrc ~/.vimrc
 ln -s $script_dir/juliarc.jl ~/.juliarc.jl
+ln -s $script_dir/ghci.conf ~/.ghc/
 ln -s $script_dir/gitconfig ~/.gitconfig
 ln -s $script_dir/gitignore_global ~/.gitignore_global
 ln -s $script_dir/tmux.conf ~/.tmux.conf
