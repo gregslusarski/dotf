@@ -15,11 +15,14 @@ fi
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-# map caps-lock to escape
-setxkbmap -option caps:escape
-xrdb -merge ~/.Xresources
 
-# set the cursor
+# map caps-lock to escape (easier to hit in vim)
+setxkbmap -option caps:escape
+# urxvt settings etc.
+xrdb -merge ~/.Xresources
+# set cursor (xmonad wm)
 xsetroot -cursor_name left_ptr
-exec xmonad
-# exec awesome
+# set wallpaper (xmonad wm)
+# feh --bg-fill ~/pics/wallp/macos/wallpaper-1119794.jpg
+#exec xmonad
+exec awesome
