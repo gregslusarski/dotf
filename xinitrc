@@ -16,6 +16,10 @@ fi
 # exec startxfce4
 # ...or the Window Manager of your choice
 # map caps-lock to escape
-xrdb -merge ~/.Xresources
 setxkbmap -option caps:escape
-exec awesome
+xrdb -merge ~/.Xresources
+
+# set the cursor
+xsetroot -cursor_name left_ptr
+exec xmonad
+# exec awesome

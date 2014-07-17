@@ -17,6 +17,7 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
+NeoBundle 'vim-scripts/haskell.vim'
 NeoBundle 'bogado/file-line'
 NeoBundle 'JuliaLang/julia-vim'
 NeoBundle 'tommcdo/vim-exchange'
@@ -467,7 +468,7 @@ let g:NERDTreeShowHidden=0
 
 " - CtrlP"{{{2
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)|tmp|Downloads|Videos|Pictures|Music$',
+    \ 'dir':  '\v[\/]\.(git|hg|svn)|tmp|dl|vids|pics|music$',
     \ 'file': '\v\.(exe|so|dll)$',
     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
     \ }
@@ -565,6 +566,7 @@ augroup END
 augroup FTOptions
   " ftplugin
   au!
+  au FileType haskell nn <buffer> <F5> :!clear<CR>:!ghci %<CR>
   au FileType julia nn <buffer> <F5> :!clear<CR>:!julia %<CR>
   au FileType lua nn <buffer> <F5> :!clear<CR>:!luajit %<CR>
   au FileType moon nn <buffer> <F5> :!clear<CR>:!moon %<CR>

@@ -86,7 +86,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({1, 2, 3, 4}, s, layouts[1])
+    tags[s] = awful.tag({1, 2, 3}, s, layouts[1])
 end
 -- }}}
 
@@ -329,7 +329,7 @@ globalkeys = awful.util.table.join(
     -- new keyboard shortcuts
     awful.key({}, "Print", function () awful.util.spawn("capscr",false) end),
     awful.key({ modkey,           }, "Delete", function () awful.util.spawn("xkill") end),
-    awful.key({ modkey,           }, "l", function () awful.util.spawn("slimlock") end),
+    awful.key({ modkey,           }, ";", function () awful.util.spawn("slimlock") end),
     -- awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
@@ -439,15 +439,15 @@ awful.rules.rules = {
     { rule = { class = "URxvt" },
       properties = { floating = false, size_hints_honor = false } },
     { rule = { class = "Google-chrome-stable" },
-      properties = { tag = tags[1][2], maximized = true } },
+      properties = { tag = tags[1][1], maximized = true } },
     { rule = { class = "Google-earth" },
-      properties = { tag = tags[1][3], maximized = true } },
+      properties = { tag = tags[1][2], maximized = true } },
     { rule = { class = "Spotify" },
-      properties = { tag = tags[1][3], maximized = true } },
+      properties = { tag = tags[1][2], maximized = true } },
     { rule = { class = "Rhythmbox" },
-      properties = { tag = tags[1][3] } },
-    { rule = { class = "Pidgin" },
       properties = { tag = tags[1][2] } },
+    { rule = { class = "Pidgin" },
+      properties = { tag = tags[1][1] } },
     -- Set Xterm as floating with a fixed position
     --  { rule = { class = "XTerm" }, properties = {floating = true}, callback
     --  = function(c) c:geometry({x=0, y=0}) end},}

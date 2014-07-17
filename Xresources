@@ -32,10 +32,10 @@ URxvt.background: #020302
 /* Plugins */
 URxvt.perl-ext-common: default,clipboard,tabbed
 /* Tabbed plugin colors */
-URxvt.tabbed.tabbar-fg: 0
+URxvt.tabbed.tabbar-fg: 4
 URxvt.tabbed.tabbar-bg: 16
 URxvt.tabbed.tab-fg: 16
-URxvt.tabbed.tab-bg: 0
+URxvt.tabbed.tab-bg: 4
 /* URxvt.iso14755: false */
 /* URxvt.url-select.launcher: google-chrome-stable */
 /* URxvt.url-select.underline: true */
