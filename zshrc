@@ -57,7 +57,7 @@ export PAGER=${PAGER:-less}
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.shell_aliases
-export CDPATH=~:~/Dropbox/projects:/usr/share/julia
+export CDPATH=~:~/Dropbox/projects
 
 # support colors in less
 export LESS_TERMCAP_mb=$'\E[01;31m'

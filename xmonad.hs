@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Util.EZConfig (additionalKeys)
 
 main = do
   xmproc <- spawnPipe "/usr/bin/xmobar /home/viszu/.xmobarrc"
@@ -11,7 +12,8 @@ main = do
     , terminal    = myTerminal
     , modMask     = myModMask
     , borderWidth = myBorderWidth
-    }
+    } `additionalKeys`
+    [ ((mod4Mask,  xK_p  ), spawn "dmenu_run -fn Cantarell-11 -nb black -nf '#ebdbb2'") ]
 
 myTerminal    = "urxvt"
 myModMask     = mod4Mask -- Win key or Super_L
