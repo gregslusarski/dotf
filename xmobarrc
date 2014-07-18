@@ -1,4 +1,4 @@
-Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
+Config { font = "xft:Cantarell-11"
 , bgColor = "black"
 , fgColor = "grey"
 , position = Top
@@ -12,5 +12,5 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
              ]
 , sepChar = "%"
 , alignSep = "}{"
-, template = "%cpu% %memory% %swap% | %eth0% }{ %EGPN% | <fc=#ee9a00>%date%</fc>"
+, template = " %cpu% %memory% %swap% | %eth4% }{ %EGPN% | <fc=#ee9a00>%date%</fc> "
 }

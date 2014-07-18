@@ -23,6 +23,6 @@ xrdb -merge ~/.Xresources
 # set cursor (xmonad wm)
 xsetroot -cursor_name left_ptr
 # set wallpaper (xmonad wm)
-# feh --bg-fill ~/pics/wallp/macos/wallpaper-1119794.jpg
-#exec xmonad
-exec awesome
+feh --bg-fill ~/pics/wallp/macos/wallpaper-1119794.jpg
+exec xmonad
+# exec awesome
