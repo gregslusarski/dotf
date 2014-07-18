@@ -21,6 +21,8 @@ xsetroot -cursor_name left_ptr
 feh --bg-fill ~/pics/wallp/macos/wallpaper-1119794.jpg
 # autostart
 synclient touchpadoff=1 &
+xbindkeys &
+xmobar &
 redshift &
 urxvt &
 pcmanfm &

@@ -16,6 +16,9 @@ sudo ln -s $script_dir/mirrorlist /etc/pacman.d/
 ln -s $script_dir/scripts/mr ~/bin/
 ln -s $script_dir/scripts/ssha ~/bin/
 ln -s $script_dir/scripts/capscr ~/bin/
+ln -s $script_dir/xbindkeysrc ~/.xbindkeysrc
+ln -s $script_dir/xmobarrc ~/.xmobarrc
+ln -s $script_dir/xmonad.hs ~/.xmonad/
 ln -s $script_dir/xinitrc ~/.xinitrc
 ln -s $script_dir/Xdefaults ~/.Xdefaults
 ln -s $script_dir/zshrc ~/.zshrc
