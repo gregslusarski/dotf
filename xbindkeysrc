@@ -1,8 +1,8 @@
 # install: xbindkeys, pamixer
 # volume
-"pamixer --increase 5"
+"pamixer --increase 10"
   XF86AudioRaiseVolume
-"pamixer --decrease 5"
+"pamixer --decrease 10"
   XF86AudioLowerVolume
 "pamixer --toggle-mute"
   XF86AudioMute
