@@ -28,6 +28,7 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true \
  --alpha 0 --margin 170 &
 redshift &
 clipit &
+dropboxd &
 urxvt &
 pcmanfm &
 # exec gnome-session
