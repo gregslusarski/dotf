@@ -20,12 +20,12 @@ xsetroot -cursor_name left_ptr
 # set wallpaper (xmonad wm)
 feh --bg-fill ~/pics/wallp/macos/wallpaper-1119794.jpg
 # autostart
-synclient touchpadoff=1 &
-xbindkeys &
 xmobar &
 redshift &
 urxvt &
 pcmanfm &
+synclient touchpadoff=1 &
+xbindkeys &
 # exec gnome-session
 # exec startkde
 # exec startxfce4
