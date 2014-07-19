@@ -17,7 +17,7 @@ main = do
     } `additionalKeys` myKeys
 
 myKeys =
-  [ ((mod4Mask,  xK_p  ), spawn "dmenu_run -fn Cantarell-11 -nb black -nf '#ebdbb2'")
+  [ ((mod4Mask,  xK_p  ), spawn "dmenu_run -fn 'Roboto Medium-10' -nb black -nf '#ebdbb2'")
   , ((shiftMask .|. mod4Mask,  xK_l  ), spawn "slimlock")
   , ((mod4Mask,  xK_b  ), sendMessage ToggleStruts)
   ]

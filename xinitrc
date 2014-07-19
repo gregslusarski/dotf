@@ -23,6 +23,9 @@ feh --bg-fill ~/pics/wallp/macos/wallpaper-1119794.jpg
 synclient touchpadoff=1 &
 xbindkeys &
 xmobar &
+trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+ --expand true --width 10 --transparent true --tint 0x000000 --height 19 \
+ --alpha 0 --margin 170 &
 redshift &
 urxvt &
 pcmanfm &
