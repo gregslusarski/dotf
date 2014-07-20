@@ -10,12 +10,12 @@ stngth=`iwconfig wlp4s0 | awk -F '=' '/Quality/ {print $2}' | cut -d '/' -f 1`
 bars=`expr $stngth / 10`
 
 case $bars in
-  0)     bar='[-----]' ;;
-  1|2)   bar='[//---]' ;;
-  3|4)   bar='[///--]' ;;
-  5|6)   bar='[////-]' ;;
-  7|8)   bar='[/////]' ;;
-  *)     bar='[--!--]' ;;
+  0)     bar='-----' ;;
+  1|2)   bar='//---' ;;
+  3|4)   bar='///--' ;;
+  5|6)   bar='////-' ;;
+  7|8)   bar='/////' ;;
+  *)     bar='--!--' ;;
 esac
 
 echo $essid $bar
