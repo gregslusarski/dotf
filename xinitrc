@@ -18,7 +18,7 @@ xrdb -merge ~/.Xresources
 # set cursor (xmonad wm)
 xsetroot -cursor_name left_ptr
 # set wallpaper (xmonad wm)
-feh --bg-fill ~/pics/wallp/macos/wallpaper-1119794.jpg
+feh --bg-fill ~/pics/wallp/toplist2/wallpaper-812988.jpg
 # autostart
 synclient touchpadoff=1 &
 xbindkeys &

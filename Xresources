@@ -1,7 +1,7 @@
 URxvt.termName: rxvt-unicode-256color
 URxvt.loginShell: true
 URxvt.depth: 32
-URxvt.fading: 20
+/* URxvt.fading: 20 */
 URxvt.transparent: false
 URxvt.tintColor: Dark Gray
 /* URxvt.shading: 40 */
