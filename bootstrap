@@ -9,11 +9,7 @@ sudo ln -s $script_dir/slim.conf /etc/
 sudo ln -s $script_dir/slimlock.conf /etc/
 sudo ln -s $script_dir/05-keyboard-layout.conf /etc/X11/xorg.conf.d/
 sudo ln -s $script_dir/20-nvidia.conf /etc/X11/xorg.conf.d/
-sudo ln -s $script_dir/makepkg.conf /etc
 sudo ln -s $script_dir/locale.conf /etc
-sudo ln -s $script_dir/mirrorlist /etc/pacman.d/
-# sudo ln -s $script_dir/pacaur_config /etc/xdg/pacaur/config
-ln -s $script_dir/scripts/mr ~/bin/
 ln -s $script_dir/scripts/ssha ~/bin/
 ln -s $script_dir/scripts/capscr ~/bin/
 ln -s $script_dir/xbindkeysrc ~/.xbindkeysrc
@@ -24,7 +20,6 @@ ln -s $script_dir/Xdefaults ~/.Xdefaults
 ln -s $script_dir/zshrc ~/.zshrc
 ln -s $script_dir/shell_aliases ~/.shell_aliases
 ln -s $script_dir/vimrc ~/.vimrc
-ln -s $script_dir/juliarc.jl ~/.juliarc.jl
 ln -s $script_dir/ghci.conf ~/.ghc/
 ln -s $script_dir/gitconfig ~/.gitconfig
 ln -s $script_dir/gitignore_global ~/.gitignore_global
@@ -32,6 +27,12 @@ ln -s $script_dir/tmux.conf ~/.tmux.conf
 ln -s $script_dir/gtkrc-2.0.mine ~/.gtkrc-2.0.mine
 ln -s $script_dir/user-dirs.dirs ~/.config/
 ln -s $script_dir/mimeapps.list ~/.local/share/applications/
-ln -s $script_dir/config/awesome ~/.config/
 ln -s $script_dir/config/redshift.conf ~/.config/
 ln -s $script_dir/config/pcmanfm.conf ~/.config/pcmanfm/default/
+# sudo ln -s $script_dir/makepkg.conf /etc
+# sudo ln -s $script_dir/mirrorlist /etc/pacman.d/
+# sudo ln -s $script_dir/pacaur_config /etc/xdg/pacaur/config
+# ln -s $script_dir/config/rediotray.xml ~/.local/share/radiotray/bookmarks.xml
+# ln -s $script_dir/config/awesome ~/.config/
+# ln -s $script_dir/juliarc.jl ~/.juliarc.jl
+# ln -s $script_dir/scripts/mr ~/bin/
