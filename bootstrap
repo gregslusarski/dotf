@@ -29,7 +29,7 @@ ln -s $script_dir/user-dirs.dirs ~/.config/
 ln -s $script_dir/mimeapps.list ~/.local/share/applications/
 ln -s $script_dir/config/redshift.conf ~/.config/
 ln -s $script_dir/config/pcmanfm.conf ~/.config/pcmanfm/default/
-# sudo ln -s $script_dir/makepkg.conf /etc
+# sudo ln -s $script_dir/bkup/makepkg.conf /etc
 # sudo ln -s $script_dir/mirrorlist /etc/pacman.d/
 # sudo ln -s $script_dir/pacaur_config /etc/xdg/pacaur/config
 # ln -s $script_dir/config/rediotray.xml ~/.local/share/radiotray/bookmarks.xml

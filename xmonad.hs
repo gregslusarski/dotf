@@ -6,6 +6,8 @@ import XMonad.Util.EZConfig (additionalKeys)
 myTerminal    = "urxvt"
 myModMask     = mod4Mask -- Win key or Super_L
 myBorderWidth = 0
+myNormalBorderColor = "#000000"
+myFocusedBorderColor = "#99ccff"
 
 main = do
   xmonad $ defaultConfig
@@ -14,6 +16,8 @@ main = do
     , terminal    = myTerminal
     , modMask     = myModMask
     , borderWidth = myBorderWidth
+    , normalBorderColor = myNormalBorderColor
+    , focusedBorderColor = myFocusedBorderColor
     } `additionalKeys` myKeys
 
 myKeys =
