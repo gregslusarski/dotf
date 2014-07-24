@@ -18,17 +18,18 @@ xrdb -merge ~/.Xresources
 # set cursor (xmonad wm)
 xsetroot -cursor_name left_ptr
 # set wallpaper (xmonad wm)
-feh --bg-fill ~/pics/wallp/toplist2/wallpaper-1908939.jpg
+feh --bg-fill ~/pics/wallp/toplist2/wallpaper-2707591.jpg
 # autostart
 synclient touchpadoff=1 &
 xbindkeys &
 xmobar &
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
  --expand true --width 10 --transparent true --tint 0x000000 --height 19 \
- --alpha 0 --margin 170 &
+ --alpha 0 --margin 175 &
 redshift &
 clipit &
 dropboxd &
+tomate &
 urxvt &
 pcmanfm &
 # exec gnome-session
