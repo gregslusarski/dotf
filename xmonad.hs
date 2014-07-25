@@ -23,5 +23,7 @@ main = do
 myKeys =
   [ ((mod4Mask,  xK_p  ), spawn "dmenu_run -fn 'Roboto Medium-10' -nb black -nf '#ebdbb2'")
   , ((shiftMask .|. mod4Mask,  xK_l  ), spawn "slimlock")
+  --take a screenshot of entire display
+  , ((mod4Mask , xK_Print ), spawn "scrot ~/pics/screens/%Y-%m-%d-%H-%M-%S.png")
   , ((mod4Mask,  xK_b  ), sendMessage ToggleStruts)
   ]
