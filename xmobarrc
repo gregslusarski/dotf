@@ -12,5 +12,5 @@ Config { font = "xft:Roboto Medium-10"
              ]
 , sepChar = "%"
 , alignSep = "}{"
-, template = " %wifi% %battery% %cpu% %memory% %swap% }{ <fc=#ee9a00>%date%</fc> "
+, template = " %cpu% %memory% %swap% %wifi% %battery% }{ <fc=#ee9a00>%date%</fc> "
 }
