@@ -1,6 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-  eval $(ssh-agent)
-  ssh-add
-fi
+eval $(ssh-agent)
+ssh-add
