@@ -227,8 +227,8 @@ nn <leader>a GVgg
 cno w!! w !sudo tee >/dev/null %
 cno ara ar **/*.*
 " Close current buffer without closing window split
-" cno bd bp\|bd #
-" cno bd! bp\|bd! #
+cno bd bp\|bd #
+cno bd! bp\|bd! #
 " Reselect visual block after indent/outdent
 vn < <gv
 vn > >gv
@@ -622,8 +622,9 @@ endif
 " colorscheme gruvbox
 colorscheme detailed
 " Get rid of the underline and bold in fold text
-hi Folded term=none gui=none
+hi Folded cterm=none gui=none
 hi Normal ctermfg=223 guifg=#ebdbb2
+hi VertSplit ctermfg=232 cterm=none gui=none
 " if g:colors_name == 'skittles_dark'
 "   hi LineNr gui=none guibg=#231F20 ctermbg=234 guifg=#5D8D8F ctermfg=66
 "   hi CursorLineNr guifg=#5D8D8F ctermfg=66
