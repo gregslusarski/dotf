@@ -32,6 +32,9 @@ dropboxd &
 tomate &
 urxvt &
 pcmanfm &
+pidgin &
+spotify &
+google-chrome-stable &
 # exec gnome-session
 # exec startkde
 # exec startxfce4

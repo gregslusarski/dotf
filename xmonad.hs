@@ -9,12 +9,27 @@ myBorderWidth = 0
 myNormalBorderColor = "#000000"
 myFocusedBorderColor = "#99ccff"
 
+myManageHook = composeAll
+   -- Open in workspace "x"
+   [ className =? "Pidgin" --> doShift "2"
+   , className =? "Spotify" --> doShift "2"
+   , className =? "Rhythmbox" --> doShift "2"
+   , className =? "Transmission-gtk" --> doShift "2"
+   , className =? "Google-chrome-stable" --> doShift "2"
+   -- Float those
+   , className =? "Viewnior" --> doFloat
+   , className =? "MuPDF" --> doFloat
+   , className =? "Gvim" --> doFloat
+   , className =? "Vlc" --> doFloat
+   , manageDocks
+   ]
+
 main = do
   xmonad $ defaultConfig
-    { manageHook  = manageDocks <+> manageHook defaultConfig
-    , layoutHook  = avoidStruts  $  layoutHook defaultConfig
-    , terminal    = myTerminal
-    , modMask     = myModMask
+    { manageHook = myManageHook <+> manageHook defaultConfig
+    , layoutHook = avoidStruts  $  layoutHook defaultConfig
+    , terminal = myTerminal
+    , modMask = myModMask
     , borderWidth = myBorderWidth
     , normalBorderColor = myNormalBorderColor
     , focusedBorderColor = myFocusedBorderColor
