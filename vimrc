@@ -492,13 +492,13 @@ endif
 " colorscheme gruvbox
 colorscheme detailed
 " Get rid of the underline and bold in fold text
-if g:colors_name == 'detailed'
-  hi Folded cterm=none gui=none
-  hi Normal ctermfg=223 guifg=#ebdbb2
-  hi VertSplit ctermfg=232 cterm=none gui=none
-  hi StatusLine ctermfg=223 cterm=none
-  hi StatusLineNC ctermfg=232 ctermbg=223
-endif
+hi Folded cterm=none gui=none
+hi Normal ctermfg=223 guifg=#ebdbb2
+hi VertSplit ctermfg=232 cterm=none gui=none
+hi StatusLine ctermfg=223 ctermbg=234 term=none cterm=none gui=none
+hi StatusLineNC ctermbg=234 term=none cterm=none gui=none
+" hi StatusLine ctermfg=223 cterm=none
+" hi StatusLineNC ctermfg=232 ctermbg=223
 " if g:colors_name == 'skittles_dark'
 "   hi LineNr gui=none guibg=#231F20 ctermbg=234 guifg=#5D8D8F ctermfg=66
 "   hi CursorLineNr guifg=#5D8D8F ctermfg=66
