@@ -495,8 +495,8 @@ colorscheme detailed
 hi Folded cterm=none gui=none
 hi Normal ctermfg=223 guifg=#ebdbb2
 hi VertSplit ctermfg=232 cterm=none gui=none
-hi StatusLine ctermfg=223 ctermbg=234 term=none cterm=none gui=none
-hi StatusLineNC ctermbg=234 term=none cterm=none gui=none
+hi StatusLine ctermfg=223 ctermbg=233 term=none cterm=none gui=none
+hi StatusLineNC ctermbg=233 term=none cterm=none gui=none
 " hi StatusLine ctermfg=223 cterm=none
 " hi StatusLineNC ctermfg=232 ctermbg=223
 " if g:colors_name == 'skittles_dark'
