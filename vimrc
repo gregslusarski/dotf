@@ -37,12 +37,12 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
-NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'chrisbra/NrrwRgn'
-NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'rking/vim-detailed'
 NeoBundle 'morhetz/gruvbox'
 NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'jeetsukumaran/vim-buffergator'
+" NeoBundle 'itchyny/lightline.vim'
 " NeoBundle 'JuliaLang/julia-vim'
 " NeoBundle 'tpope/vim-vinegar'
 " NeoBundle 'ajh17/VimCompletesMe'
@@ -148,7 +148,9 @@ set cmdheight=2
 set showmatch
 " Always show status line
 set laststatus=2
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 set textwidth=78 wrap linebreak
+set fillchars+=vert:│
 " Backspace
 set backspace=indent,eol,start
 set complete-=i
@@ -252,7 +254,7 @@ nn <silent> <F4> :setl paste!<CR>
 nn N Nzz
 nn n nzz
 " Switch fast between buffers
-" nn <leader>l :ls<CR>:b<Space>
+nn <leader>b :ls<CR>:b<Space>
 " Open vimrc
 nn <leader>ev :e $MYVIMRC<CR>
 " Source vimrc
@@ -289,138 +291,6 @@ no <silent> <leader>e :NR<CR>
 vmap <expr> ++ VMATH_YankAndAnalyse()
 nmap ++ vip++
 
-" - Lighline"{{{2
-let g:lightline = {
-        \ 'colorscheme': 'powerline',
-        \ 'mode_map' : {
-        \ 'n' : 'N',
-        \ 'i' : 'I',
-        \ 'R' : 'R',
-        \ 'v' : 'V',
-        \ 'V' : 'V-L',
-        \ 'c' : 'C',
-        \ "\<C-v>": 'V-B',
-        \ 's' : 'S',
-        \ 'S' : 'S-L',
-        \ "\<C-s>": 'S-B',
-        \ '?': '      ' },
-        \ 'active': {
-        \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-        \   'right': [[ 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype']]
-        \ },
-        \ 'component': {
-        \   'lineinfo': '%3l:%-2v',
-        \   'paste': '%{&paste?"P":""}',
-        \ },
-        \ 'component_function': {
-        \   'fugitive': 'MyFugitive',
-        \   'filename': 'MyFilename',
-        \   'fileformat': 'MyFileformat',
-        \   'filetype': 'MyFiletype',
-        \   'fileencoding': 'MyFileencoding',
-        \   'mode': 'MyMode',
-        \   'ctrlpmark': 'CtrlPMark',
-        \ },
-        \ 'subseparator': { 'left': '|', 'right': '|' }
-        \ }
-
-function! MyModified()
-  return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! MyReadonly()
-  return &ft !~? 'help' && &readonly ? 'RO' : ''
-endfunction
-
-function! MyFilename()
-  let fname = expand('%:t')
-  return fname == 'ControlP' ? g:lightline.ctrlp_item :
-        \ fname == '__Tagbar__' ? g:lightline.fname :
-        \ fname =~ '__Gundo\|NERD_tree' ? '' :
-        \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \ &ft == 'unite' ? unite#get_status_string() :
-        \ &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ ('' != fname ? fname : '[No Name]') .
-        \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
-
-function! MyFugitive()
-  try
-    if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = ' '  " edit here for cool mark
-      let _ = fugitive#head()
-      return strlen(_) ? mark._ : ''
-    endif
-  catch
-  endtry
-  return ''
-endfunction
-
-function! MyFileformat()
-  return winwidth('.') > 70 ? &fileformat : ''
-endfunction
-
-function! MyFiletype()
-  return winwidth('.') > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-endfunction
-
-function! MyFileencoding()
-  return winwidth('.') > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
-endfunction
-
-function! MyMode()
-  let fname = expand('%:t')
-  return fname == '__Tagbar__' ? 'Tagbar' :
-        \ fname == 'ControlP' ? 'CtrlP' :
-        \ fname == '__Gundo__' ? 'Gundo' :
-        \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
-        \ fname =~ 'NERD_tree' ? 'NERDTree' :
-        \ &ft == 'unite' ? 'Unite' :
-        \ &ft == 'vimfiler' ? 'VimFiler' :
-        \ &ft == 'vimshell' ? 'VimShell' :
-        \ winwidth('.') > 60 ? lightline#mode() : ''
-endfunction
-
-function! CtrlPMark()
-  if expand('%:t') =~ 'ControlP'
-    call lightline#link('iR'[g:lightline.ctrlp_regex])
-    return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
-          \ , g:lightline.ctrlp_next], 0)
-  else
-    return ''
-  endif
-endfunction
-
-let g:ctrlp_status_func = {
-  \ 'main': 'CtrlPStatusFunc_1',
-  \ 'prog': 'CtrlPStatusFunc_2',
-  \ }
-
-function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
-  let g:lightline.ctrlp_regex = a:regex
-  let g:lightline.ctrlp_prev = a:prev
-  let g:lightline.ctrlp_item = a:item
-  let g:lightline.ctrlp_next = a:next
-  return lightline#statusline(0)
-endfunction
-
-function! CtrlPStatusFunc_2(str)
-  return lightline#statusline(0)
-endfunction
-
-let g:tagbar_status_func = 'TagbarStatusFunc'
-
-function! TagbarStatusFunc(current, sort, fname, ...) abort
-    let g:lightline.fname = a:fname
-  return lightline#statusline(0)
-endfunction
-
-let g:unite_force_overwrite_statusline = 0
-let g:vimfiler_force_overwrite_statusline = 0
-let g:vimshell_force_overwrite_statusline = 0
-
-
 " - Sparkup"{{{2
 " let g:sparkupExecuteMapping='<leader>j'
 " let g:sparkupNextMapping='<leader>n'
@@ -430,9 +300,9 @@ let g:vimshell_force_overwrite_statusline = 0
 " - Buffergator"{{{2
 " let g:buffergator_split_size = 30
 " let g:buffergator_display_regime = "bufname"
-let g:buffergator_autoexpand_on_split = 0
-let g:buffergator_suppress_keymaps = 1
-nn <silent> <leader>b :BuffergatorToggle<CR>
+" let g:buffergator_autoexpand_on_split = 0
+" let g:buffergator_suppress_keymaps = 1
+" nn <silent> <leader>b :BuffergatorToggle<CR>
 
 
 " - Ultisnips"{{{2
@@ -622,9 +492,13 @@ endif
 " colorscheme gruvbox
 colorscheme detailed
 " Get rid of the underline and bold in fold text
-hi Folded cterm=none gui=none
-hi Normal ctermfg=223 guifg=#ebdbb2
-hi VertSplit ctermfg=232 cterm=none gui=none
+if g:colors_name == 'detailed'
+  hi Folded cterm=none gui=none
+  hi Normal ctermfg=223 guifg=#ebdbb2
+  hi VertSplit ctermfg=232 cterm=none gui=none
+  hi StatusLine ctermfg=226 cterm=none
+  hi StatusLineNC ctermfg=232 ctermbg=223
+endif
 " if g:colors_name == 'skittles_dark'
 "   hi LineNr gui=none guibg=#231F20 ctermbg=234 guifg=#5D8D8F ctermfg=66
 "   hi CursorLineNr guifg=#5D8D8F ctermfg=66
