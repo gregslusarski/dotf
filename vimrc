@@ -148,7 +148,8 @@ set cmdheight=2
 set showmatch
 " Always show status line
 set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%=%-16(\ %l/%L,%c\ %)%P
+" set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set textwidth=78 wrap linebreak
 " Backspace
 set backspace=indent,eol,start
