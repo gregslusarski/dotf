@@ -150,7 +150,6 @@ set showmatch
 set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 set textwidth=78 wrap linebreak
-set fillchars+=vert:│
 " Backspace
 set backspace=indent,eol,start
 set complete-=i
@@ -496,7 +495,7 @@ if g:colors_name == 'detailed'
   hi Folded cterm=none gui=none
   hi Normal ctermfg=223 guifg=#ebdbb2
   hi VertSplit ctermfg=232 cterm=none gui=none
-  hi StatusLine ctermfg=226 cterm=none
+  hi StatusLine ctermfg=223 cterm=none
   hi StatusLineNC ctermfg=232 ctermbg=223
 endif
 " if g:colors_name == 'skittles_dark'
