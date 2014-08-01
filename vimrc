@@ -488,7 +488,7 @@ else
   " set t_ut=
 endif
 
-" set background=dark
+set background=dark
 " colorscheme gruvbox
 colorscheme detailed
 " Get rid of the underline and bold in fold text
