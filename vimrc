@@ -474,8 +474,6 @@ endfun
 if has('gui_running')
   if has('unix')
     set guifont=Inconsolata-g\ 10
-    " set guifont=Inconsolata-dz\ for\ Powerline\ 10
-    " set guifont=Inconsolata\ 11
   endif
   set lines=38 columns=83
   colorscheme detailed
@@ -491,18 +489,15 @@ endif
 set background=dark
 " colorscheme gruvbox
 colorscheme detailed
-" Get rid of the underline and bold in fold text
-hi Folded cterm=none gui=none
+" don't bold, underline folded
+hi Folded term=none cterm=none gui=none
 hi Normal ctermfg=223 guifg=#ebdbb2
+" black vsplit border
 hi VertSplit ctermfg=232 cterm=none gui=none
+" don't revert statusline colors, use those instead
 hi StatusLine ctermfg=223 ctermbg=233 term=none cterm=none gui=none
 hi StatusLineNC ctermbg=233 term=none cterm=none gui=none
-" hi StatusLine ctermfg=223 cterm=none
-" hi StatusLineNC ctermfg=232 ctermbg=223
 " if g:colors_name == 'skittles_dark'
-"   hi LineNr gui=none guibg=#231F20 ctermbg=234 guifg=#5D8D8F ctermfg=66
-"   hi CursorLineNr guifg=#5D8D8F ctermfg=66
 " endif
 " SignColumn will use same bg color as linenumber (GitGutter will set it)
 hi clear SignColumn
-" hi SignColumn ctermbg=0 guibg=DarkGrey
