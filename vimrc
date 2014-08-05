@@ -20,8 +20,6 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'vim-scripts/haskell.vim'
 NeoBundle 'bogado/file-line'
 NeoBundle 'tommcdo/vim-exchange'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
@@ -30,7 +28,6 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-git'
-NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'vim-scripts/Gundo'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'airblade/vim-gitgutter'
@@ -39,8 +36,11 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'rking/vim-detailed'
-NeoBundle 'morhetz/gruvbox'
 NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'morhetz/gruvbox'
+" NeoBundle 'godlygeek/tabular'
+" NeoBundle 'junegunn/vim-easy-align'
+" NeoBundle 'Raimondi/delimitMate'
 " NeoBundle 'jeetsukumaran/vim-buffergator'
 " NeoBundle 'itchyny/lightline.vim'
 " NeoBundle 'JuliaLang/julia-vim'
@@ -148,7 +148,7 @@ set cmdheight=2
 set showmatch
 " Always show status line
 set laststatus=2
-set statusline=\ [%n]\ %<%.99f\ %h%w%m%r%y%=%-16(\ %l/%L,%c\ %)%P
+set statusline=\ [%n]\ %<%.99f\ %h%w%m%r%y%=%-16(\ %l/%L\ %c\ %)%P
 " set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set textwidth=78 wrap linebreak
 " Backspace
